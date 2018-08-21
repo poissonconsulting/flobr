@@ -14,8 +14,8 @@ Converts a file to and from a flob.
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/poissonconsulting/rtide}
-  \item Report bugs at \url{https://github.com/poissonconsulting/rtide/issues}
+  \item \url{https://github.com/poissonconsulting/flobr}
+  \item Report bugs at \url{https://github.com/poissonconsulting/flobr/issues}
 }
 
 }

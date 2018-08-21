@@ -11,8 +11,8 @@ Description: Converts a file to and from a flob.
     A flob is a serialized blob of a file,
     which was read into binary in integer-mode as little endian, 
     that also includes the extension of the original file.
-URL: https://github.com/poissonconsulting/rtide
-BugReports: https://github.com/poissonconsulting/rtide/issues
+URL: https://github.com/poissonconsulting/flobr
+BugReports: https://github.com/poissonconsulting/flobr/issues
 Imports: 
     blob,
     tools
