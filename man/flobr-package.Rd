@@ -6,7 +6,18 @@
 \alias{flobr-package}
 \title{flobr: Convert a file to and from binary data (BLOB)}
 \description{
-What the package does (one paragraph).
+Converts a file to and from a flob. 
+    A flob is a serialized blob of a file,
+    which was read into binary in integer-mode as little endian, 
+    that also includes the extension of the original file.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/poissonconsulting/rtide}
+  \item Report bugs at \url{https://github.com/poissonconsulting/rtide/issues}
+}
+
 }
 \author{
 \strong{Maintainer}: Joe Thorley \email{joe@poissonconsulting.ca}
