@@ -1,0 +1,22 @@
+Package: flobr
+Title: Convert a file to and from binary data (BLOB)
+Date: 2018-08-21
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Joe",
+           family = "Thorley",
+           role = c("aut", "cre"),
+           email = "joe@poissonconsulting.ca")
+Description: What the package does (one paragraph).
+Imports: 
+    blob,
+    tools
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Suggests: 
+    covr,
+    spelling,
+    testthat
+RoxygenNote: 6.1.0
+Language: en-US
