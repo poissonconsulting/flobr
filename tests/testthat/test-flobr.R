@@ -1,5 +1,9 @@
 context("flobr")
 
+test_that("flob_old", {
+  expect_is(flob_old, "flob")
+})
+
 test_that("package", {
 
   path <- system.file("extdata", "flobr.pdf", package = "flobr", mustWork = TRUE)
