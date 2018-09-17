@@ -4,6 +4,8 @@
 [![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Travis build
 status](https://travis-ci.org/poissonconsulting/flobr.svg?branch=master)](https://travis-ci.org/poissonconsulting/flobr)
+[![AppVeyor build
+status](https://ci.appveyor.com/api/projects/status/github/poissonconsulting/flobr?branch=master&svg=true)](https://ci.appveyor.com/project/poissonconsulting/flobr)
 [![Coverage
 status](https://codecov.io/gh/poissonconsulting/flobr/branch/master/graph/badge.svg)](https://codecov.io/github/poissonconsulting/flobr?branch=master)
 [![License:
@@ -22,7 +24,7 @@ original file.
 ``` r
 library(flobr)
 
-path <- system.file("extdata", "flobr.pdf", package = "flobr", mustWork = TRUE)
+path <- system.file("extdata", "flobr.pdf", package = "flobr")
 
 flob <- flob(path)
 flob
@@ -61,7 +63,8 @@ To install the latest development version from the Poisson drat
 To cite package 'flobr' in publications use:
 
   Joe Thorley (2018). flobr: Convert a file to and from binary
-  data (BLOB). R package version 0.0.0.9000.
+  data (BLOB). R package version 0.0.0.9002.
+  https://github.com/poissonconsulting/flobr
 
 A BibTeX entry for LaTeX users is
 
@@ -69,7 +72,8 @@ A BibTeX entry for LaTeX users is
     title = {flobr: Convert a file to and from binary data (BLOB)},
     author = {Joe Thorley},
     year = {2018},
-    note = {R package version 0.0.0.9000},
+    note = {R package version 0.0.0.9002},
+    url = {https://github.com/poissonconsulting/flobr},
   }
 ```
 
