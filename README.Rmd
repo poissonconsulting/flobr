@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![Travis build status](https://travis-ci.org/poissonconsulting/flobr.svg?branch=master)](https://travis-ci.org/poissonconsulting/flobr)
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/poissonconsulting/flobr?branch=master&svg=true)](https://ci.appveyor.com/project/poissonconsulting/flobr)
 [![Coverage status](https://codecov.io/gh/poissonconsulting/flobr/branch/master/graph/badge.svg)](https://codecov.io/github/poissonconsulting/flobr?branch=master)
@@ -23,8 +23,13 @@ knitr::opts_chunk$set(
 
 `flobr` is an R package to convert a file to and from a flob.
 
-A flob is a serialized blob of a file, which was read into binary in integer-mode as little endian, that also includes the extension of the original file.
+A flob is a file that was 
+read into binary in integer-mode as little endian, 
+saved as the single element of a named list (where the name is the extension
+of the original file) and then serialized before being coerced into a blob.
 
+Flobs are useful for saving files in databases.
+    
 ## Utilisation
 
 ```{r}
@@ -33,7 +38,7 @@ library(flobr)
 path <- system.file("extdata", "flobr.pdf", package = "flobr")
 
 flob <- flob(path)
-flob
+print(check_flob(flob))
 flob_ext(flob)
 
 new_path <- tempfile(fileext = ".pdf")

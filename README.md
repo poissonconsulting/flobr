@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-[![lifecycle](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![Travis build
 status](https://travis-ci.org/poissonconsulting/flobr.svg?branch=master)](https://travis-ci.org/poissonconsulting/flobr)
 [![AppVeyor build
@@ -15,9 +15,12 @@ MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org
 
 `flobr` is an R package to convert a file to and from a flob.
 
-A flob is a serialized blob of a file, which was read into binary in
-integer-mode as little endian, that also includes the extension of the
-original file.
+A flob is a file that was read into binary in integer-mode as little
+endian, saved as the single element of a named list (where the name is
+the extension of the original file) and then serialized before being
+coerced into a blob.
+
+Flobs are useful for saving files in databases.
 
 ## Utilisation
 
@@ -27,7 +30,7 @@ library(flobr)
 path <- system.file("extdata", "flobr.pdf", package = "flobr")
 
 flob <- flob(path)
-flob
+print(check_flob(flob))
 #> /Library/Frameworks/R.framework/Versions/3.5/Resources/library/flobr/extdata/flobr.pdf 
 #>                                                                        blob[133.84 kB]
 flob_ext(flob)
@@ -63,7 +66,7 @@ To install the latest development version from the Poisson drat
 To cite package 'flobr' in publications use:
 
   Joe Thorley (2018). flobr: Convert a file to and from binary
-  data (BLOB). R package version 0.0.0.9004.
+  data (BLOB). R package version 0.0.1.
   https://github.com/poissonconsulting/flobr
 
 A BibTeX entry for LaTeX users is
@@ -72,7 +75,7 @@ A BibTeX entry for LaTeX users is
     title = {flobr: Convert a file to and from binary data (BLOB)},
     author = {Joe Thorley},
     year = {2018},
-    note = {R package version 0.0.0.9004},
+    note = {R package version 0.0.1},
     url = {https://github.com/poissonconsulting/flobr},
   }
 ```

@@ -56,7 +56,7 @@ unflob <- function(flob, path) {
   path_ext <- tools::file_ext(path)
 
   if(identical(path_ext, "")) {
-    path <- paste0(path, flob_ext)
+    path <- paste0(path, ".", flob_ext)
   } else if(!identical(path_ext, flob_ext))
     stop("path extension must match '", flob_ext, "'", call. = FALSE)
 

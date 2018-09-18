@@ -9,8 +9,9 @@
 Converts a file to and from a flob. 
     A flob is a file that was 
     read into binary in integer-mode as little endian, 
-    saved as the single element of a named list where the name is the extension
-    of the original file and then serialized before being coerced into a blob.
+    saved as the single element of a named list (where the name is the extension
+    of the original file) and then serialized before being coerced into a blob.
+    Flobs are useful for saving files in databases.
 }
 \seealso{
 Useful links:
