@@ -29,7 +29,7 @@ path <- system.file("extdata", "flobr.pdf", package = "flobr")
 flob <- flob(path)
 flob
 #> /Library/Frameworks/R.framework/Versions/3.5/Resources/library/flobr/extdata/flobr.pdf 
-#>                                                                        blob[133.79 kB]
+#>                                                                        blob[133.84 kB]
 flob_ext(flob)
 #> [1] "pdf"
 
@@ -63,7 +63,7 @@ To install the latest development version from the Poisson drat
 To cite package 'flobr' in publications use:
 
   Joe Thorley (2018). flobr: Convert a file to and from binary
-  data (BLOB). R package version 0.0.0.9002.
+  data (BLOB). R package version 0.0.0.9004.
   https://github.com/poissonconsulting/flobr
 
 A BibTeX entry for LaTeX users is
@@ -72,7 +72,7 @@ A BibTeX entry for LaTeX users is
     title = {flobr: Convert a file to and from binary data (BLOB)},
     author = {Joe Thorley},
     year = {2018},
-    note = {R package version 0.0.0.9002},
+    note = {R package version 0.0.0.9004},
     url = {https://github.com/poissonconsulting/flobr},
   }
 ```

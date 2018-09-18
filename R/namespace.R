@@ -1,2 +1,2 @@
-#' @import blob
+#' @import blob checkr err
 NULL

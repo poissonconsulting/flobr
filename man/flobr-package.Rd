@@ -7,9 +7,10 @@
 \title{flobr: Convert a file to and from binary data (BLOB)}
 \description{
 Converts a file to and from a flob. 
-    A flob is a serialized blob of a file,
-    which was read into binary in integer-mode as little endian, 
-    that also includes the extension of the original file.
+    A flob is a file that was 
+    read into binary in integer-mode as little endian, 
+    saved as the single element of a named list where the name is the extension
+    of the original file and then serialized before being coerced into a blob.
 }
 \seealso{
 Useful links:
@@ -20,7 +21,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Joe Thorley \email{joe@poissonconsulting.ca}
+\strong{Maintainer}: Joe Thorley \email{joe@poissonconsulting.ca} (0000-0002-7683-4592)
 
 }
 \keyword{internal}

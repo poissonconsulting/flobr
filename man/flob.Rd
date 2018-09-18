@@ -15,11 +15,6 @@ A named flob of the file.
 \description{
 Converts a file into a flob.
 }
-\details{
-A flob is a serialized blob of a file,
-which was read into binary in integer-mode as little endian,
-that also includes the extension of the original file.
-}
 \examples{
 path <- system.file("extdata", "flobr.pdf", package = "flobr")
 flob <- flob(path)
@@ -29,6 +24,5 @@ flob_ext(flob)
 unflob(flob, tempfile())
 }
 \seealso{
-\code{\link{blob}}, \code{\link{serialize}}, \code{\link{readBin}}
-and \code{\link{unflob}}
+\code{\link{flobr}}
 }

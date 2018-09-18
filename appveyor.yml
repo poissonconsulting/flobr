@@ -16,6 +16,9 @@ cache:
 # Adapt as necessary starting from here
 
 build_script:
+  - travis-tool.sh install_github poissonconsulting/err
+  - travis-tool.sh install_github poissonconsulting/checkr
+  - travis-tool.sh install_github poissonconsulting/err
   - travis-tool.sh install_deps
 
 test_script:

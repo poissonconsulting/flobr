@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Is flob — is_flob • flobr</title>
+<title>Check flob — check_flob • flobr</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,9 +30,9 @@
 
 
 
-<meta property="og:title" content="Is flob — is_flob" />
+<meta property="og:title" content="Check flob — check_flob" />
 
-<meta property="og:description" content="Is flob" />
+<meta property="og:description" content="Check flob" />
 <meta name="twitter:card" content="summary" />
 
 
@@ -97,31 +97,39 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Is flob</h1>
-    <small class="dont-index">Source: <a href='https://github.com/poissonconsulting/flobr/blob/master/R/utils.R'><code>R/utils.R</code></a></small>
-    <div class="hidden name"><code>is_flob.Rd</code></div>
+    <h1>Check flob</h1>
+    <small class="dont-index">Source: <a href='https://github.com/poissonconsulting/flobr/blob/master/R/check.R'><code>R/check.R</code></a></small>
+    <div class="hidden name"><code>check_flob.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Is flob</p>
+    <p>Check flob</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>is_flob</span>(<span class='no'>x</span>)</pre>
+    <pre class="usage"><span class='fu'>check_flob</span>(<span class='no'>x</span>, <span class='kw'>old</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>x_name</span> <span class='kw'>=</span> <span class='fu'>substitute</span>(<span class='no'>x</span>))</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
       <th>x</th>
-      <td><p>An object to test</p></td>
+      <td><p>The object to check.</p></td>
+    </tr>
+    <tr>
+      <th>old</th>
+      <td><p>A flag indicating whether old flobs are permitted.</p></td>
+    </tr>
+    <tr>
+      <th>x_name</th>
+      <td><p>A string of the object name.</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A flag indicating whether x inherits from <code><a href='flob.html'>flob</a></code>.</p>
+    <p>An invisible copy of x.</p>
     
     <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
 
