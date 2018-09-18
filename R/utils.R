@@ -4,6 +4,8 @@
 #' @return A string of the extension of the original file.
 #' @seealso \code{\link{flobr}}
 #' @export
+#' @examples
+#' flob_ext(flob_obj)
 flob_ext <- function(flob) {
   check_flob(flob, old = TRUE)
   flob <- unlist(flob)
@@ -17,6 +19,8 @@ flob_ext <- function(flob) {
 #' @return A flag indicating whether x inherits from \code{\link{flob}}.
 #' @seealso \code{\link{flobr}}
 #' @export
+#' @examples
+#' is_flob(flob_obj)
 is_flob <- function(x) {
   inherits(x, "flob")
 }

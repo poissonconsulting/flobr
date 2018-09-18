@@ -15,6 +15,9 @@ A string of the extension of the original file.
 \description{
 Flob Extension
 }
+\examples{
+flob_ext(flob_obj)
+}
 \seealso{
 \code{\link{flobr}}
 }

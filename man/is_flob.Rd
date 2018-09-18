@@ -15,6 +15,9 @@ A flag indicating whether x inherits from \code{\link{flob}}.
 \description{
 Is flob
 }
+\examples{
+is_flob(flob_obj)
+}
 \seealso{
 \code{\link{flobr}}
 }

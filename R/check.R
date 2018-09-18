@@ -8,13 +8,16 @@ check_exint <- function(x, x_name) {
 
 #' Check flob
 #'
+#' Checks whether an object is a \code{\link{flob}}.
+#'
 #' @param x The object to check.
 #' @param old A flag indicating whether old flobs are permitted.
 #' @param x_name A string of the object name.
-#'
 #' @return An invisible copy of x.
 #' @seealso \code{\link{flobr}}
 #' @export
+#' @examples
+#' check_flob(flob_obj)
 check_flob <- function(x, old = FALSE, x_name = substitute(x)) {
   check_flag(old)
 

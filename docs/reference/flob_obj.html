@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Flob Extension — flob_ext • flobr</title>
+<title>A flob Object — flob_obj • flobr</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,9 +30,9 @@
 
 
 
-<meta property="og:title" content="Flob Extension — flob_ext" />
+<meta property="og:title" content="A flob Object — flob_obj" />
 
-<meta property="og:description" content="Flob Extension" />
+<meta property="og:description" content="A flob of 'inst/extdata/flobr.pdf'." />
 <meta name="twitter:card" content="summary" />
 
 
@@ -100,48 +100,33 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Flob Extension</h1>
-    <small class="dont-index">Source: <a href='https://github.com/poissonconsulting/flobr/blob/master/R/utils.R'><code>R/utils.R</code></a></small>
-    <div class="hidden name"><code>flob_ext.Rd</code></div>
+    <h1>A flob Object</h1>
+    <small class="dont-index">Source: <a href='https://github.com/poissonconsulting/flobr/blob/master/R/data.R'><code>R/data.R</code></a></small>
+    <div class="hidden name"><code>flob_obj.Rd</code></div>
     </div>
 
     <div class="ref-description">
     
-    <p>Flob Extension</p>
+    <p>A <code><a href='flob.html'>flob</a></code> of <code>'inst/extdata/flobr.pdf'</code>.</p>
     
     </div>
 
-    <pre class="usage"><span class='fu'>flob_ext</span>(<span class='no'>flob</span>)</pre>
-    
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>flob</th>
-      <td><p>A <code><a href='flob.html'>flob</a></code></p></td>
-    </tr>
-    </table>
-    
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+    <pre class="usage"><span class='no'>flob_obj</span></pre>
+        
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A string of the extension of the original file.</p>
-    
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
-
-    <div class='dont-index'><p><code><a href='flobr-package.html'>flobr</a></code></p></div>
+    <p>An object of class <code>flob</code> (inherits from <code>blob</code>) of length 1.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>flob_ext</span>(<span class='no'>flob_obj</span>)</div><div class='output co'>#&gt; [1] "pdf"</div></pre>
+    <pre class="examples"><div class='input'><span class='no'>flob_obj</span></div><div class='output co'>#&gt; inst/extdata/flobr.pdf 
+#&gt;        blob[133.84 kB] </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#arguments">Arguments</a></li>
       
-      <li><a href="#value">Value</a></li>
-
-      <li><a href="#see-also">See also</a></li>
+      <li><a href="#format">Format</a></li>
       
       <li><a href="#examples">Examples</a></li>
     </ul>

@@ -38,7 +38,7 @@ library(flobr)
 path <- system.file("extdata", "flobr.pdf", package = "flobr")
 
 flob <- flob(path)
-print(check_flob(flob))
+flob
 flob_ext(flob)
 
 new_path <- tempfile(fileext = ".pdf")

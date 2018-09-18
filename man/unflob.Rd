@@ -21,6 +21,6 @@ Converts a \code{\link{flob}} back to its original file format.
 If path does not include an extension then it is added automatically.
 If path does include an extension and then it must match the flob's extension.
 }
-\seealso{
-\code{\link{flobr}}
+\examples{
+unflob(flob_obj, tempfile())
 }

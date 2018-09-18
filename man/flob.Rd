@@ -15,13 +15,18 @@ A named flob of the file.
 \description{
 Converts a file into a flob.
 }
+\details{
+A flob is a file that was read into binary in integer-mode as little endian,
+ saved as the single element of a named list
+ (where the name is the extension of the original file)
+ and then serialized before being coerced into a blob.
+
+Flobs are useful for saving files in databases.
+}
 \examples{
 path <- system.file("extdata", "flobr.pdf", package = "flobr")
 flob <- flob(path)
 flob
-is_flob(flob)
-flob_ext(flob)
-unflob(flob, tempfile())
 }
 \seealso{
 \code{\link{flobr}}

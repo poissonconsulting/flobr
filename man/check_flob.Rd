@@ -17,7 +17,10 @@ check_flob(x, old = FALSE, x_name = substitute(x))
 An invisible copy of x.
 }
 \description{
-Check flob
+Checks whether an object is a \code{\link{flob}}.
+}
+\examples{
+check_flob(flob_obj)
 }
 \seealso{
 \code{\link{flobr}}

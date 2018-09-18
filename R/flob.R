@@ -2,6 +2,13 @@
 #'
 #' Converts a file into a flob.
 #'
+#'  A flob is a file that was read into binary in integer-mode as little endian,
+#'  saved as the single element of a named list
+#'  (where the name is the extension of the original file)
+#'  and then serialized before being coerced into a blob.
+#'
+#'  Flobs are useful for saving files in databases.
+#'
 #' @param path A string of the path to the file.
 #' @return A named flob of the file.
 #' @seealso \code{\link{flobr}}
@@ -9,9 +16,6 @@
 #' path <- system.file("extdata", "flobr.pdf", package = "flobr")
 #' flob <- flob(path)
 #' flob
-#' is_flob(flob)
-#' flob_ext(flob)
-#' unflob(flob, tempfile())
 #' @export
 flob <- function(path) {
   check_string(path)
@@ -44,8 +48,9 @@ flob <- function(path) {
 #' @param flob The \code{\link{flob}} to save to file.
 #' @param path A string of the path to the new file.
 #' @return An invisible string of the path to the saved file.
-#' @seealso \code{\link{flobr}}
 #' @export
+#' @examples
+#' unflob(flob_obj, tempfile())
 unflob <- function(flob, path) {
   check_flob(flob, old = TRUE)
   check_string(path)
