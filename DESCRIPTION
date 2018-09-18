@@ -1,7 +1,7 @@
 Package: flobr
 Title: Convert a file to and from binary data (BLOB)
-Version: 0.0.1.9001
-Date: 2018-09-17
+Version: 0.0.1.9002
+Date: 2018-09-18
 Authors@R: 
   person("Joe", "Thorley", email = "joe@poissonconsulting.ca", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-7683-4592"))
 Description: Converts a file to and from a flob. 
@@ -22,7 +22,9 @@ Suggests:
     covr,
     spelling,
     testthat
-Additional_Repositories: http://poissonconsulting.github.io/drat
+Remotes:
+    poissonconsulting/err,
+    poissonconsulting/checkr
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
