@@ -9,3 +9,4 @@
 ^CODE_OF_CONDUCT\.md$
 ^flobr\.Rproj$
 ^\.Rproj\.user$
+^build\.R$

@@ -1,6 +1,8 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
+# flobr <img src="man/figures/logo.png" align="right" />
+
 [![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![Travis build
 status](https://travis-ci.org/poissonconsulting/flobr.svg?branch=master)](https://travis-ci.org/poissonconsulting/flobr)
@@ -66,7 +68,7 @@ To install the latest development version from the Poisson drat
 To cite package 'flobr' in publications use:
 
   Joe Thorley (2018). flobr: Convert a file to and from binary
-  data (BLOB). R package version 0.0.1.9001.
+  data (BLOB). R package version 0.0.1.9002.
   https://github.com/poissonconsulting/flobr
 
 A BibTeX entry for LaTeX users is
@@ -75,7 +77,7 @@ A BibTeX entry for LaTeX users is
     title = {flobr: Convert a file to and from binary data (BLOB)},
     author = {Joe Thorley},
     year = {2018},
-    note = {R package version 0.0.1.9001},
+    note = {R package version 0.0.1.9002},
     url = {https://github.com/poissonconsulting/flobr},
   }
 ```

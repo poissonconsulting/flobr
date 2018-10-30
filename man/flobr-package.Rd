@@ -6,6 +6,8 @@
 \alias{flobr-package}
 \title{flobr: Convert a file to and from binary data (BLOB)}
 \description{
+\if{html}{\figure{logo.png}{options: align='right'}}
+
 Converts a file to and from a flob. 
     A flob is a file that was 
     read into binary in integer-mode as little endian, 
