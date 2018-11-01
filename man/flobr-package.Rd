@@ -4,16 +4,16 @@
 \name{flobr-package}
 \alias{flobr}
 \alias{flobr-package}
-\title{flobr: Convert a file to and from binary data (BLOB)}
+\title{flobr: Convert Files to and from Binary Objects (BLOBs)}
 \description{
 \if{html}{\figure{logo.png}{options: align='right'}}
 
-Converts a file to and from a flob. 
+Converts files to and from flobs. 
     A flob is a file that was 
     read into binary in integer-mode as little endian, 
     saved as the single element of a named list (where the name is the extension
     of the original file) and then serialized before being coerced into a blob.
-    Flobs are useful for saving files in databases.
+    Flobs are useful for writing and reading files to and from databases.
 }
 \seealso{
 Useful links:

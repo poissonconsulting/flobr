@@ -5,17 +5,17 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Convert a file to and from binary data (BLOB) • flobr</title>
+<title>Convert Files to and from Binary Objects (BLOBs) • flobr</title>
 <!-- jquery --><script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><!-- Font Awesome icons --><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha384-cV+rhyOuRHc9Ub/91rihWcGmMmCXDeksTtCihMupQHSsi8GIIRDG0ThDc3HGQFJ3" crossorigin="anonymous"></script><!-- sticky kit --><script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
-<script src="pkgdown.js"></script><meta property="og:title" content="Convert a file to and from binary data (BLOB)">
-<meta property="og:description" content="Converts a file to and from a flob. 
+<script src="pkgdown.js"></script><meta property="og:title" content="Convert Files to and from Binary Objects (BLOBs)">
+<meta property="og:description" content="Converts files to and from flobs. 
     A flob is a file that was 
     read into binary in integer-mode as little endian, 
     saved as the single element of a named list (where the name is the extension
     of the original file) and then serialized before being coerced into a blob.
-    Flobs are useful for saving files in databases.">
+    Flobs are useful for writing and reading files to and from databases.">
 <meta property="og:image" content="/logo.png">
 <meta name="twitter:card" content="summary">
 <!-- mathjax --><script src="https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!--[if lt IE 9]>
@@ -85,9 +85,9 @@
 <div id="introduction" class="section level2">
 <h2 class="hasAnchor">
 <a href="#introduction" class="anchor"></a>Introduction</h2>
-<p><code>flobr</code> is an R package to convert a file to and from a flob.</p>
+<p><code>flobr</code> is an R package to convert files to and from flobs.</p>
 <p>A flob is a file that was read into binary in integer-mode as little endian, saved as the single element of a named list (where the name is the extension of the original file) and then serialized before being coerced into a blob.</p>
-<p>Flobs are useful for saving files in databases.</p>
+<p>Flobs are useful for writing and reading files to and from databases.</p>
 </div>
 <div id="utilisation" class="section level2">
 <h2 class="hasAnchor">
@@ -114,7 +114,9 @@
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>To install the latest development version from <a href="https://github.com/poissonconsulting/flobr">GitHub</a></p>
-<pre><code><a href="http://www.rdocumentation.org/packages/devtools/topics/install_github"># install.packages("devtools")
+<pre><code><a href="http://www.rdocumentation.org/packages/devtools/topics/reexports"># install.packages("devtools")
+devtools::install_github("poissonconsulting/err")
+devtools::install_github("poissonconsulting/checkr")
 devtools::install_github("poissonconsulting/flobr")</a></code></pre>
 <p>To install the latest development version from the Poisson drat <a href="https://github.com/poissonconsulting/drat">repository</a></p>
 <pre><code><a href="http://www.rdocumentation.org/packages/drat/topics/addRepo"># install.packages("drat")
@@ -141,17 +143,18 @@ A BibTeX entry for LaTeX users is
     url = {https://github.com/poissonconsulting/flobr},
   }</code></pre>
 </div>
+<div id="creditation" class="section level2">
+<h2 class="hasAnchor">
+<a href="#creditation" class="anchor"></a>Creditation</h2>
+<p>The <a href="https://github.com/tidyverse/blob">blob</a> package.</p>
+<p>The hex was designed by <a href="http://www.theforest.ca">The Forest</a>.</p>
+</div>
 <div id="contribution" class="section level2">
 <h2 class="hasAnchor">
 <a href="#contribution" class="anchor"></a>Contribution</h2>
 <p>Please report any <a href="https://github.com/poissonconsulting/flobr/issues">issues</a>.</p>
 <p><a href="https://github.com/poissonconsulting/flobr/pulls">Pull requests</a> are always welcome.</p>
 <p>Please note that this project is released with a <a href="CONDUCT.html">Contributor Code of Conduct</a>. By participating in this project you agree to abide by its terms.</p>
-</div>
-<div id="creditation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#creditation" class="anchor"></a>Creditation</h2>
-<p>The <a href="https://github.com/tidyverse/blob">blob</a> package.</p>
 </div>
 </div>
   </div>
@@ -188,6 +191,7 @@ A BibTeX entry for LaTeX users is
 <li><a href="https://ci.appveyor.com/project/poissonconsulting/flobr"><img src="https://ci.appveyor.com/api/projects/status/github/poissonconsulting/flobr?branch=master&amp;svg=true" alt="AppVeyor build status"></a></li>
 <li><a href="https://codecov.io/github/poissonconsulting/flobr?branch=master"><img src="https://codecov.io/gh/poissonconsulting/flobr/branch/master/graph/badge.svg" alt="Coverage status"></a></li>
 <li><a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a></li>
+<li><a href="https://cran.r-project.org/package=flobr"><img src="https://www.r-pkg.org/badges/version/flobr" alt="CRAN status"></a></li>
 </ul>
 </div>
 </div>

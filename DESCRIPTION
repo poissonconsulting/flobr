@@ -1,32 +1,28 @@
 Package: flobr
-Title: Convert a file to and from binary data (BLOB)
+Title: Convert Files to and from Binary Objects (BLOBs)
 Version: 0.0.1.9002
-Date: 2018-09-18
 Authors@R: 
   person("Joe", "Thorley", email = "joe@poissonconsulting.ca", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-7683-4592"))
-Description: Converts a file to and from a flob. 
+Description: Converts files to and from flobs. 
     A flob is a file that was 
     read into binary in integer-mode as little endian, 
     saved as the single element of a named list (where the name is the extension
     of the original file) and then serialized before being coerced into a blob.
-    Flobs are useful for saving files in databases.
+    Flobs are useful for writing and reading files to and from databases.
 URL: https://github.com/poissonconsulting/flobr
 BugReports: https://github.com/poissonconsulting/flobr/issues
 Depends: R (>= 3.3.0)
 Imports: 
-    blob,
-    checkr,
     err,
+    checkr,
+    blob,
     tools
 Suggests: 
     covr,
     spelling,
     testthat
-Remotes:
-    poissonconsulting/err,
-    poissonconsulting/checkr
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.0
-Language: en-US
+Language: en-CA

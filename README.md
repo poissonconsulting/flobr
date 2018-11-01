@@ -12,17 +12,19 @@ status](https://ci.appveyor.com/api/projects/status/github/poissonconsulting/flo
 status](https://codecov.io/gh/poissonconsulting/flobr/branch/master/graph/badge.svg)](https://codecov.io/github/poissonconsulting/flobr?branch=master)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/flobr)](https://cran.r-project.org/package=flobr)
 
 ## Introduction
 
-`flobr` is an R package to convert a file to and from a flob.
+`flobr` is an R package to convert files to and from flobs.
 
 A flob is a file that was read into binary in integer-mode as little
 endian, saved as the single element of a named list (where the name is
 the extension of the original file) and then serialized before being
 coerced into a blob.
 
-Flobs are useful for saving files in databases.
+Flobs are useful for writing and reading files to and from databases.
 
 ## Utilisation
 
@@ -52,6 +54,8 @@ To install the latest development version from
 [GitHub](https://github.com/poissonconsulting/flobr)
 
     # install.packages("devtools")
+    devtools::install_github("poissonconsulting/err")
+    devtools::install_github("poissonconsulting/checkr")
     devtools::install_github("poissonconsulting/flobr")
 
 To install the latest development version from the Poisson drat
@@ -82,6 +86,12 @@ A BibTeX entry for LaTeX users is
   }
 ```
 
+## Creditation
+
+The [blob](https://github.com/tidyverse/blob) package.
+
+The hex was designed by [The Forest](http://www.theforest.ca).
+
 ## Contribution
 
 Please report any
@@ -93,7 +103,3 @@ always welcome.
 Please note that this project is released with a [Contributor Code of
 Conduct](CONDUCT.md). By participating in this project you agree to
 abide by its terms.
-
-## Creditation
-
-The [blob](https://github.com/tidyverse/blob) package.
