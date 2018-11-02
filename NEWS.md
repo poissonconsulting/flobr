@@ -1,3 +1,5 @@
+# flobr 0.1.0
+
 * Added `flob_obj`
 
 # flobr 0.0.1

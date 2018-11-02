@@ -1,6 +1,6 @@
 Package: flobr
 Title: Convert Files to and from Binary Objects (BLOBs)
-Version: 0.0.1.9002
+Version: 0.1.0
 Authors@R: 
   person("Joe", "Thorley", email = "joe@poissonconsulting.ca", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-7683-4592"))
 Description: Converts files to and from flobs. 

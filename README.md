@@ -67,24 +67,25 @@ To install the latest development version from the Poisson drat
 
 ## Citation
 
-``` 
-
-To cite package 'flobr' in publications use:
-
-  Joe Thorley (2018). flobr: Convert a file to and from binary
-  data (BLOB). R package version 0.0.1.9002.
-  https://github.com/poissonconsulting/flobr
-
-A BibTeX entry for LaTeX users is
-
-  @Manual{,
-    title = {flobr: Convert a file to and from binary data (BLOB)},
-    author = {Joe Thorley},
-    year = {2018},
-    note = {R package version 0.0.1.9002},
-    url = {https://github.com/poissonconsulting/flobr},
-  }
-```
+    Warning in citation(package = "flobr"): no date field in DESCRIPTION file
+    of package 'flobr'
+    Warning in citation(package = "flobr"): could not determine year for
+    'flobr' from package DESCRIPTION file
+    
+    To cite package 'flobr' in publications use:
+    
+      Joe Thorley (NA). flobr: Convert Files to and from Binary
+      Objects (BLOBs). R package version 0.1.0.
+      https://github.com/poissonconsulting/flobr
+    
+    A BibTeX entry for LaTeX users is
+    
+      @Manual{,
+        title = {flobr: Convert Files to and from Binary Objects (BLOBs)},
+        author = {Joe Thorley},
+        note = {R package version 0.1.0},
+        url = {https://github.com/poissonconsulting/flobr},
+      }
 
 ## Creditation
 
@@ -102,4 +103,4 @@ always welcome.
 
 Please note that this project is released with a [Contributor Code of
 Conduct](CONDUCT.md). By participating in this project you agree to
-abide by its terms.
+abide by its terms
