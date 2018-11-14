@@ -35,7 +35,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">flobr</a>
-        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.0</span>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.1.0.9000</span>
       </span>
     </div>
 
@@ -92,59 +92,38 @@
 <div id="utilisation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#utilisation" class="anchor"></a>Utilisation</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">library</span>(flobr)</a>
-<a class="sourceLine" id="cb1-2" data-line-number="2"></a>
-<a class="sourceLine" id="cb1-3" data-line-number="3">path &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">"extdata"</span>, <span class="st">"flobr.pdf"</span>, <span class="dt">package =</span> <span class="st">"flobr"</span>)</a>
-<a class="sourceLine" id="cb1-4" data-line-number="4"></a>
-<a class="sourceLine" id="cb1-5" data-line-number="5">flob &lt;-<span class="st"> </span><span class="kw"><a href="reference/flob.html">flob</a></span>(path)</a>
-<a class="sourceLine" id="cb1-6" data-line-number="6">flob</a>
-<a class="sourceLine" id="cb1-7" data-line-number="7"><span class="co">#&gt; /Library/Frameworks/R.framework/Versions/3.5/Resources/library/flobr/extdata/flobr.pdf </span></a>
-<a class="sourceLine" id="cb1-8" data-line-number="8"><span class="co">#&gt;                                                                        blob[133.84 kB]</span></a>
-<a class="sourceLine" id="cb1-9" data-line-number="9"><span class="kw"><a href="reference/flob_ext.html">flob_ext</a></span>(flob)</a>
-<a class="sourceLine" id="cb1-10" data-line-number="10"><span class="co">#&gt; [1] "pdf"</span></a>
-<a class="sourceLine" id="cb1-11" data-line-number="11"></a>
-<a class="sourceLine" id="cb1-12" data-line-number="12">new_path &lt;-<span class="st"> </span><span class="kw">tempfile</span>(<span class="dt">fileext =</span> <span class="st">".pdf"</span>)</a>
-<a class="sourceLine" id="cb1-13" data-line-number="13"></a>
-<a class="sourceLine" id="cb1-14" data-line-number="14"><span class="kw"><a href="reference/unflob.html">unflob</a></span>(flob, new_path)</a>
-<a class="sourceLine" id="cb1-15" data-line-number="15"></a>
-<a class="sourceLine" id="cb1-16" data-line-number="16"><span class="kw">all.equal</span>(flob, <span class="kw"><a href="reference/flob.html">flob</a></span>(new_path), <span class="dt">check.attributes =</span> <span class="ot">FALSE</span>)</a>
-<a class="sourceLine" id="cb1-17" data-line-number="17"><span class="co">#&gt; [1] TRUE</span></a></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw">library</span>(flobr)</a>
+<a class="sourceLine" id="cb1-2" title="2"></a>
+<a class="sourceLine" id="cb1-3" title="3">path &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">"extdata"</span>, <span class="st">"flobr.pdf"</span>, <span class="dt">package =</span> <span class="st">"flobr"</span>)</a>
+<a class="sourceLine" id="cb1-4" title="4"></a>
+<a class="sourceLine" id="cb1-5" title="5">flob &lt;-<span class="st"> </span><span class="kw"><a href="reference/flob.html">flob</a></span>(path)</a>
+<a class="sourceLine" id="cb1-6" title="6">flob</a>
+<a class="sourceLine" id="cb1-7" title="7"><span class="co">#&gt; /Library/Frameworks/R.framework/Versions/3.5/Resources/library/flobr/extdata/flobr.pdf </span></a>
+<a class="sourceLine" id="cb1-8" title="8"><span class="co">#&gt;                                                                        blob[133.84 kB]</span></a>
+<a class="sourceLine" id="cb1-9" title="9"><span class="kw"><a href="reference/flob_ext.html">flob_ext</a></span>(flob)</a>
+<a class="sourceLine" id="cb1-10" title="10"><span class="co">#&gt; [1] "pdf"</span></a>
+<a class="sourceLine" id="cb1-11" title="11"></a>
+<a class="sourceLine" id="cb1-12" title="12">new_path &lt;-<span class="st"> </span><span class="kw">tempfile</span>(<span class="dt">fileext =</span> <span class="st">".pdf"</span>)</a>
+<a class="sourceLine" id="cb1-13" title="13"></a>
+<a class="sourceLine" id="cb1-14" title="14"><span class="kw"><a href="reference/unflob.html">unflob</a></span>(flob, new_path)</a>
+<a class="sourceLine" id="cb1-15" title="15"></a>
+<a class="sourceLine" id="cb1-16" title="16"><span class="kw">all.equal</span>(flob, <span class="kw"><a href="reference/flob.html">flob</a></span>(new_path), <span class="dt">check.attributes =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb1-17" title="17"><span class="co">#&gt; [1] TRUE</span></a></code></pre></div>
 </div>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
+<p>To install the latest version from <a href="https://CRAN.R-project.org/package=flobr">CRAN</a></p>
+<pre><code>install.packages("flobr")</code></pre>
 <p>To install the latest development version from <a href="https://github.com/poissonconsulting/flobr">GitHub</a></p>
-<pre><code><a href="http://www.rdocumentation.org/packages/devtools/topics/reexports"># install.packages("devtools")
+<pre><code>install.packages("devtools")
 devtools::install_github("poissonconsulting/err")
 devtools::install_github("poissonconsulting/checkr")
-devtools::install_github("poissonconsulting/flobr")</a></code></pre>
+devtools::install_github("poissonconsulting/flobr")</code></pre>
 <p>To install the latest development version from the Poisson drat <a href="https://github.com/poissonconsulting/drat">repository</a></p>
-<pre><code><a href="http://www.rdocumentation.org/packages/drat/topics/addRepo"># install.packages("drat")
+<pre><code>install.packages("drat")
 drat::addRepo("poissonconsulting")
-install.packages("flobr")</a></code></pre>
-</div>
-<div id="citation" class="section level2">
-<h2 class="hasAnchor">
-<a href="#citation" class="anchor"></a>Citation</h2>
-<pre><code>Warning in citation(package = "flobr"): no date field in DESCRIPTION file
-of package 'flobr'
-Warning in citation(package = "flobr"): could not determine year for
-'flobr' from package DESCRIPTION file
-
-To cite package 'flobr' in publications use:
-
-  Joe Thorley (NA). flobr: Convert Files to and from Binary
-  Objects (BLOBs). R package version 0.1.0.
-  https://github.com/poissonconsulting/flobr
-
-A BibTeX entry for LaTeX users is
-
-  @Manual{,
-    title = {flobr: Convert Files to and from Binary Objects (BLOBs)},
-    author = {Joe Thorley},
-    note = {R package version 0.1.0},
-    url = {https://github.com/poissonconsulting/flobr},
-  }</code></pre>
+install.packages("flobr")</code></pre>
 </div>
 <div id="creditation" class="section level2">
 <h2 class="hasAnchor">
@@ -166,6 +145,8 @@ A BibTeX entry for LaTeX users is
     <div class="links">
 <h2>Links</h2>
 <ul class="list-unstyled">
+<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=flobr">https://​cloud.r-project.org/​package=flobr</a>
+</li>
 <li>Browse source code at <br><a href="https://github.com/poissonconsulting/flobr">https://​github.com/​poissonconsulting/​flobr</a>
 </li>
 <li>Report a bug at <br><a href="https://github.com/poissonconsulting/flobr/issues">https://​github.com/​poissonconsulting/​flobr/​issues</a>

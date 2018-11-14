@@ -50,10 +50,15 @@ all.equal(flob, flob(new_path), check.attributes = FALSE)
 
 ## Installation
 
+To install the latest version from
+[CRAN](https://CRAN.R-project.org/package=flobr)
+
+    install.packages("flobr")
+
 To install the latest development version from
 [GitHub](https://github.com/poissonconsulting/flobr)
 
-    # install.packages("devtools")
+    install.packages("devtools")
     devtools::install_github("poissonconsulting/err")
     devtools::install_github("poissonconsulting/checkr")
     devtools::install_github("poissonconsulting/flobr")
@@ -61,31 +66,9 @@ To install the latest development version from
 To install the latest development version from the Poisson drat
 [repository](https://github.com/poissonconsulting/drat)
 
-    # install.packages("drat")
+    install.packages("drat")
     drat::addRepo("poissonconsulting")
     install.packages("flobr")
-
-## Citation
-
-    Warning in citation(package = "flobr"): no date field in DESCRIPTION file
-    of package 'flobr'
-    Warning in citation(package = "flobr"): could not determine year for
-    'flobr' from package DESCRIPTION file
-    
-    To cite package 'flobr' in publications use:
-    
-      Joe Thorley (NA). flobr: Convert Files to and from Binary
-      Objects (BLOBs). R package version 0.1.0.
-      https://github.com/poissonconsulting/flobr
-    
-    A BibTeX entry for LaTeX users is
-    
-      @Manual{,
-        title = {flobr: Convert Files to and from Binary Objects (BLOBs)},
-        author = {Joe Thorley},
-        note = {R package version 0.1.0},
-        url = {https://github.com/poissonconsulting/flobr},
-      }
 
 ## Creditation
 

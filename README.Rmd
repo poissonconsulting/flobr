@@ -53,9 +53,14 @@ all.equal(flob, flob(new_path), check.attributes = FALSE)
 
 ## Installation
 
+To install the latest version from [CRAN](https://CRAN.R-project.org/package=flobr)
+```
+install.packages("flobr")
+```
+
 To install the latest development version from [GitHub](https://github.com/poissonconsulting/flobr)
 ```
-# install.packages("devtools")
+install.packages("devtools")
 devtools::install_github("poissonconsulting/err")
 devtools::install_github("poissonconsulting/checkr")
 devtools::install_github("poissonconsulting/flobr")
@@ -63,15 +68,9 @@ devtools::install_github("poissonconsulting/flobr")
 
 To install the latest development version from the Poisson drat [repository](https://github.com/poissonconsulting/drat)
 ```
-# install.packages("drat")
+install.packages("drat")
 drat::addRepo("poissonconsulting")
 install.packages("flobr")
-```
-
-## Citation
-
-```{r, comment="", echo=FALSE}
-citation(package = "flobr")
 ```
 
 ## Creditation
