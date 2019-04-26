@@ -1,6 +1,6 @@
 Package: flobr
 Title: Convert Files to and from Binary Objects (BLOBs)
-Version: 0.1.0.9000
+Version: 0.1.0.9001
 Authors@R: 
   person("Joe", "Thorley", email = "joe@poissonconsulting.ca", role = c("aut", "cre"), comment = c(ORCID = "0000-0002-7683-4592"))
 Description: Converts files to and from flobs. 
@@ -9,8 +9,7 @@ Description: Converts files to and from flobs.
     saved as the single element of a named list (where the name is the extension
     of the original file) and then serialized before being coerced into a blob.
     Flobs are useful for writing and reading files to and from databases.
-URL: https://github.com/poissonconsulting/flobr
-BugReports: https://github.com/poissonconsulting/flobr/issues
+License: MIT + file LICENSE
 Depends: R (>= 3.3.0)
 Imports: 
     err,
@@ -21,7 +20,8 @@ Suggests:
     covr,
     spelling,
     testthat
-License: MIT + file LICENSE
+URL: https://github.com/poissonconsulting/flobr
+BugReports: https://github.com/poissonconsulting/flobr/issues
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.1.1
