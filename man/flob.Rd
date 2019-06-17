@@ -4,10 +4,13 @@
 \alias{flob}
 \title{Flob File}
 \usage{
-flob(path)
+flob(path, name = NULL)
 }
 \arguments{
 \item{path}{A string of the path to the file.}
+
+\item{name}{A string of the name (without the extension) for the flob.
+If NULL (the default) then the original file name is used.}
 }
 \value{
 A named flob of the file.

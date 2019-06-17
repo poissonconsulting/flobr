@@ -10,6 +10,8 @@
 #'  Flobs are useful for saving files in databases.
 #'
 #' @param path A string of the path to the file.
+#' @param name A string of the name (without the extension) for the flob.
+#' If NULL (the default) then the original file name is used.
 #' @return A named flob of the file.
 #' @seealso \code{\link{flobr}}
 #' @examples
@@ -17,8 +19,9 @@
 #' flob <- flob(path)
 #' flob
 #' @export
-flob <- function(path) {
+flob <- function(path, name = NULL) {
   check_string(path)
+  checkor(check_string(name), check_null(name))
 
   if (!file.exists(path)) stop("file '", path, "' does not exist", call. = FALSE)
 

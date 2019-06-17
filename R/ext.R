@@ -17,5 +17,5 @@ file_separator <- function() {
 }
 
 ends_with_file_separator <- function(x) {
-  grepl(paste0(file_separator(), "$"), x)
+  grepl(p0(file_separator(), "$"), x)
 }
