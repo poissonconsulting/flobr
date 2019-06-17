@@ -3,7 +3,9 @@
 
 # flobr <img src="man/figures/logo.png" align="right" />
 
-[![lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+<!-- badges: start -->
+
+[![Lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![Travis build
 status](https://travis-ci.org/poissonconsulting/flobr.svg?branch=master)](https://travis-ci.org/poissonconsulting/flobr)
 [![AppVeyor build
@@ -12,9 +14,11 @@ status](https://ci.appveyor.com/api/projects/status/github/poissonconsulting/flo
 status](https://codecov.io/gh/poissonconsulting/flobr/branch/master/graph/badge.svg)](https://codecov.io/github/poissonconsulting/flobr?branch=master)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+[![status](https://tinyverse.netlify.com/badge/flobr)](https://CRAN.R-project.org/package=flobr)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/flobr)](https://cran.r-project.org/package=flobr)
 ![CRAN Downloads](http://cranlogs.r-pkg.org/badges/flobr)
+<!-- badges: end -->
 
 ## Introduction
 
@@ -22,8 +26,8 @@ status](https://www.r-pkg.org/badges/version/flobr)](https://cran.r-project.org/
 
 A flob is a file that was read into binary in integer-mode as little
 endian, saved as the single element of a named list (where the name is
-the extension of the original file) and then serialized before being
-coerced into a blob.
+the name of the original file including its extension) and then
+serialized before being coerced into a blob.
 
 Flobs are useful for writing and reading files to and from databases.
 
@@ -36,16 +40,18 @@ path <- system.file("extdata", "flobr.pdf", package = "flobr")
 
 flob <- flob(path)
 flob
-#> /Library/Frameworks/R.framework/Versions/3.5/Resources/library/flobr/extdata/flobr.pdf 
-#>                                                                        blob[133.84 kB]
+#> /Library/Frameworks/R.framework/Versions/3.6/Resources/library/flobr/extdata/flobr.pdf 
+#>                                                                        blob[133.85 kB]
+flob_name(flob)
+#> [1] "flobr"
 flob_ext(flob)
 #> [1] "pdf"
 
-new_path <- tempfile(fileext = ".pdf")
+new_path <- file.path(tempdir(), "")
 
 unflob(flob, new_path)
 
-all.equal(flob, flob(new_path), check.attributes = FALSE)
+all.equal(flob, flob(paste0(new_path, "flobr.pdf")), check.attributes = FALSE)
 #> [1] TRUE
 ```
 
@@ -59,19 +65,9 @@ To install the latest official release from
 To install the latest development version from the Poisson drat
 [repository](https://github.com/poissonconsulting/drat)
 
-    if(!"drat" %in% installed.packages()[,1]) 
-      install.packages("drat")
+    if(!"drat" %in% installed.packages()[,1]) install.packages("drat")
     drat::addRepo("poissonconsulting")
     install.packages("flobr")
-
-To install the latest development version from
-[GitHub](https://github.com/poissonconsulting/flobr)
-
-    if(!"devtools" %in% installed.packages()[,1]) 
-      install.packages("devtools")
-    devtools::install_github("poissonconsulting/err")
-    devtools::install_github("poissonconsulting/checkr")
-    devtools::install_github("poissonconsulting/flobr")
 
 ## Creditation
 

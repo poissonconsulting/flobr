@@ -22,8 +22,9 @@ test_that("package", {
   check_flob(flob)
   expect_identical(names(flob), path)
   expect_identical(flob_ext(flob), "pdf")
+  expect_identical(flob_name(flob), "flobr")
 
-  new_path <- unflob(flob, tempfile(fileext = ".pdf"))
+  new_path <- unflob(flob, file.path(dirname(tempfile()), ""))
   expect_equivalent(flob(new_path), flob)
   expect_error(unflob(flob, tempfile(fileext = ".pdf1")), "path extension must match 'pdf'")
   file <- tempfile()

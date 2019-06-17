@@ -19,5 +19,5 @@ Flob Extension
 flob_ext(flob_obj)
 }
 \seealso{
-\code{\link{flobr}}
+\code{\link{flobr}} and \code{\link{flob_name}}.
 }

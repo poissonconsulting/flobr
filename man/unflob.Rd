@@ -18,8 +18,13 @@ An invisible string of the path to the saved file.
 Converts a \code{\link{flob}} back to its original file format.
 }
 \details{
-If path does not include an extension then it is added automatically.
-If path does include an extension and then it must match the flob's extension.
+If path ends with a file separator then the name and extension of the flob is added.
+If the flob is an older flob that was not saved with a name then it is named 'file'.
+
+If path ends with a file name without an extension then the extension of the flob
+is automatically added.
+Alternatively if path also includes an extension
+then it must match the flob's extension.
 }
 \examples{
 unflob(flob_obj, tempfile())
