@@ -4,27 +4,26 @@
 \alias{flob}
 \title{Flob File}
 \usage{
-flob(path, name = NULL)
+flob(path, name = "")
 }
 \arguments{
 \item{path}{A string of the path to the file.}
 
 \item{name}{A string of the name (without the extension) for the flob.
-If NULL (the default) then the original file name is used.}
+If "" (the default) then the original file name is used.}
 }
 \value{
 A named flob of the file.
 }
 \description{
 Converts a file into a flob.
+ Flobs are useful for saving files in databases.
 }
 \details{
 A flob is a file that was read into binary in integer-mode as little endian,
  saved as the single element of a named list
  (where the name is the extension of the original file)
  and then serialized before being coerced into a blob.
-
-Flobs are useful for saving files in databases.
 }
 \examples{
 path <- system.file("extdata", "flobr.pdf", package = "flobr")

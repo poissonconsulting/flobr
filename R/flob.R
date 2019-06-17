@@ -1,17 +1,17 @@
 #' Flob File
 #'
 #' Converts a file into a flob.
+#'  Flobs are useful for saving files in databases.
 #'
 #'  A flob is a file that was read into binary in integer-mode as little endian,
 #'  saved as the single element of a named list
 #'  (where the name is the extension of the original file)
 #'  and then serialized before being coerced into a blob.
 #'
-#'  Flobs are useful for saving files in databases.
 #'
 #' @param path A string of the path to the file.
 #' @param name A string of the name (without the extension) for the flob.
-#' If NULL (the default) then the original file name is used.
+#' If "" (the default) then the original file name is used.
 #' @return A named flob of the file.
 #' @seealso \code{\link{flobr}}
 #' @examples
@@ -19,9 +19,9 @@
 #' flob <- flob(path)
 #' flob
 #' @export
-flob <- function(path, name = NULL) {
+flob <- function(path, name = "") {
   check_string(path)
-  checkor(check_string(name), check_null(name))
+  check_string(name)
 
   if (!file.exists(path)) stop("file '", path, "' does not exist", call. = FALSE)
 
@@ -29,7 +29,8 @@ flob <- function(path, name = NULL) {
   flob <- readBin(path, what = "integer", n = n, endian = "little")
   flob <- list(flob)
   class(flob) <- "exint"
-  names(flob) <- basename(path)
+
+  names(flob) <- name(name, path)
 
   flob <- serialize(flob, NULL)
   flob <- list(flob)
