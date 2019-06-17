@@ -6,9 +6,20 @@ test_that("flob_old", {
                "serialized element of flob_old must inherit from class exint")
   expect_identical(check_flob(flob_old, old = TRUE), flob_old)
   expect_identical(flob_ext(flob_old), "pdf")
+  expect_identical(flob_name(flob_old), "file")
   file <- tempfile(fileext = ".pdf")
   expect_identical(unflob(flob_old, file), file)
   expect_error(unflob(flob_old, tempfile(fileext = ".pdf1")), "path extension must match 'pdf'")
+})
+
+test_that("flob_noname", {
+  expect_true(is_flob(flob_noname))
+  expect_identical(check_flob(flob_noname), flob_noname)
+  expect_identical(flob_ext(flob_noname), "pdf")
+  expect_identical(flob_name(flob_noname), "file")
+  file <- tempfile(fileext = ".pdf")
+  expect_identical(unflob(flob_noname, file), file)
+  expect_error(unflob(flob_noname, tempfile(fileext = ".pdf1")), "path extension must match 'pdf'")
 })
 
 test_that("package", {
