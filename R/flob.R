@@ -35,6 +35,7 @@ flob <- function(path, name = "") {
   flob <- serialize(flob, NULL)
   flob <- list(flob)
   flob <- as_blob(flob)
+  attr(flob, "ptype") <- NULL
   class(flob) <- c("flob", "blob")
 
   names(flob) <- path
