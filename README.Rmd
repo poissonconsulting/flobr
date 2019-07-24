@@ -36,7 +36,7 @@ saved as the single element of a named list (where the name is the name of the o
 
 Flobs are useful for writing and reading files to and from databases.
 
-## Utilisation
+## Demonstration
 
 ```{r}
 library(flobr)
