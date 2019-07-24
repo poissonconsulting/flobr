@@ -44,7 +44,7 @@ library(flobr)
 path <- system.file("extdata", "flobr.pdf", package = "flobr")
 
 flob <- flob(path)
-flob
+str(flob)
 flob_name(flob)
 flob_ext(flob)
 
@@ -58,16 +58,15 @@ all.equal(flob, flob(paste0(new_path, "flobr.pdf")), check.attributes = FALSE)
 
 ## Installation
 
-To install the latest official release from [CRAN](https://CRAN.R-project.org/package=checkr)
-```
+To install the latest release version from [CRAN](https://cran.r-project.org)
+```r
 install.packages("flobr")
 ```
 
-To install the latest development version from the Poisson drat [repository](https://github.com/poissonconsulting/drat)
-```
-if(!"drat" %in% installed.packages()[,1]) install.packages("drat")
-drat::addRepo("poissonconsulting")
-install.packages("flobr")
+To install the latest development version from [GitHub](https://github.com/poissonconsulting/hmstimer)
+```r
+# install.packages("remotes")
+remotes::install_github("poissonconsulting/flobr")
 ```
 
 ## Creditation
@@ -82,5 +81,5 @@ Please report any [issues](https://github.com/poissonconsulting/flobr/issues).
 
 [Pull requests](https://github.com/poissonconsulting/flobr/pulls) are always welcome.
 
-Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). 
-By participating in this project you agree to abide by its terms.
+Please note that this project is released with a [Contributor Code of Conduct](https://github.com/poissonconsulting/flobr/blob/master/CODE_OF_CONDUCT.md).
+By contributing, you agree to abide by its terms.

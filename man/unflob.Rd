@@ -4,7 +4,7 @@
 \alias{unflob}
 \title{Unflob to File}
 \usage{
-unflob(flob, path)
+unflob(flob, path = file.path(".", ""))
 }
 \arguments{
 \item{flob}{The \code{\link{flob}} to save to file.}

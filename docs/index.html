@@ -7,13 +7,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Convert Files to and from Binary Objects (BLOBs) • flobr</title>
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script><!-- Bootstrap --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- sticky kit --><script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css" integrity="sha256-nAmazAk6vS34Xqo0BSrTb+abbtFlgsFK7NKSi6o7Y78=" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/v4-shims.min.css" integrity="sha256-6qHlizsOWFskGlwVOKuns+D1nB6ssZrHQrNj1wGplHc=" crossorigin="anonymous">
+<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" integrity="sha256-FiZwavyI2V6+EXO1U+xzLG3IKldpiTFf3153ea9zikQ=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/headroom.min.js" integrity="sha256-DJFC1kqIhelURkuza0AvYal5RxMtpzLjFhsnVIeuk+U=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.9.4/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
 <script src="pkgdown.js"></script><meta property="og:title" content="Convert Files to and from Binary Objects (BLOBs)">
 <meta property="og:description" content="Converts files to and from flobs. 
     A flob is a file that was 
     read into binary in integer-mode as little endian, 
-    saved as the single element of a named list (where the name is the extension
+    saved as the single element of a named list (where the name is the name 
     of the original file) and then serialized before being coerced into a blob.
     Flobs are useful for writing and reading files to and from databases.">
 <meta property="og:image" content="/logo.png">
@@ -36,7 +37,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">flobr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0.9001</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0</span>
       </span>
     </div>
 
@@ -44,7 +45,7 @@
       <ul class="nav navbar-nav">
 <li>
   <a href="index.html">
-    <span class="fa fa-home fa-lg"></span>
+    <span class="fas fa fas fa-home fa-lg"></span>
      
   </a>
 </li>
@@ -58,7 +59,7 @@
 <ul class="nav navbar-nav navbar-right">
 <li>
   <a href="https://github.com/poissonconsulting/flobr">
-    <span class="fa fa-github fa-lg"></span>
+    <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -71,6 +72,7 @@
 <!--/.navbar -->
 
       
+
       </header><div class="row">
   <div class="col-md-9 contents">
     
@@ -82,51 +84,48 @@
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#flobr" class="anchor"></a>flobr <img src="reference/figures/logo.png" align="right">
 </h1></div>
-<p><a href="https://www.tidyverse.org/lifecycle/#maturing"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="lifecycle"></a> <a href="https://travis-ci.org/poissonconsulting/flobr"><img src="https://travis-ci.org/poissonconsulting/flobr.svg?branch=master" alt="Travis build status"></a> <a href="https://ci.appveyor.com/project/poissonconsulting/flobr"><img src="https://ci.appveyor.com/api/projects/status/github/poissonconsulting/flobr?branch=master&amp;svg=true" alt="AppVeyor build status"></a> <a href="https://codecov.io/github/poissonconsulting/flobr?branch=master"><img src="https://codecov.io/gh/poissonconsulting/flobr/branch/master/graph/badge.svg" alt="Coverage status"></a> <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a> <a href="https://cran.r-project.org/package=flobr"><img src="https://www.r-pkg.org/badges/version/flobr" alt="CRAN status"></a> <img src="http://cranlogs.r-pkg.org/badges/flobr" alt="CRAN Downloads"></p>
+<!-- badges: start -->
+<p><a href="https://www.tidyverse.org/lifecycle/#maturing"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="Lifecycle"></a> <a href="https://travis-ci.org/poissonconsulting/flobr"><img src="https://travis-ci.org/poissonconsulting/flobr.svg?branch=master" alt="Travis build status"></a> <a href="https://ci.appveyor.com/project/poissonconsulting/flobr"><img src="https://ci.appveyor.com/api/projects/status/github/poissonconsulting/flobr?branch=master&amp;svg=true" alt="AppVeyor build status"></a> <a href="https://codecov.io/github/poissonconsulting/flobr?branch=master"><img src="https://codecov.io/gh/poissonconsulting/flobr/branch/master/graph/badge.svg" alt="Coverage status"></a> <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-green.svg" alt="License: MIT"></a> <a href="https://CRAN.R-project.org/package=flobr"><img src="https://tinyverse.netlify.com/badge/flobr" alt="status"></a> <a href="https://cran.r-project.org/package=flobr"><img src="https://www.r-pkg.org/badges/version/flobr" alt="CRAN status"></a> <img src="http://cranlogs.r-pkg.org/badges/flobr" alt="CRAN Downloads"><!-- badges: end --></p>
 <div id="introduction" class="section level2">
 <h2 class="hasAnchor">
 <a href="#introduction" class="anchor"></a>Introduction</h2>
 <p><code>flobr</code> is an R package to convert files to and from flobs.</p>
-<p>A flob is a file that was read into binary in integer-mode as little endian, saved as the single element of a named list (where the name is the extension of the original file) and then serialized before being coerced into a blob.</p>
+<p>A flob is a file that was read into binary in integer-mode as little endian, saved as the single element of a named list (where the name is the name of the original file including its extension) and then serialized before being coerced into a blob.</p>
 <p>Flobs are useful for writing and reading files to and from databases.</p>
 </div>
 <div id="utilisation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#utilisation" class="anchor"></a>Utilisation</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/library">library</a></span>(flobr)</a>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span>(flobr)</a>
 <a class="sourceLine" id="cb1-2" title="2"></a>
-<a class="sourceLine" id="cb1-3" title="3">path &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/system.file">system.file</a></span>(<span class="st">"extdata"</span>, <span class="st">"flobr.pdf"</span>, <span class="dt">package =</span> <span class="st">"flobr"</span>)</a>
+<a class="sourceLine" id="cb1-3" title="3">path &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span>(<span class="st">"extdata"</span>, <span class="st">"flobr.pdf"</span>, <span class="dt">package =</span> <span class="st">"flobr"</span>)</a>
 <a class="sourceLine" id="cb1-4" title="4"></a>
 <a class="sourceLine" id="cb1-5" title="5">flob &lt;-<span class="st"> </span><span class="kw"><a href="reference/flob.html">flob</a></span>(path)</a>
-<a class="sourceLine" id="cb1-6" title="6">flob</a>
-<a class="sourceLine" id="cb1-7" title="7"><span class="co">#&gt; /Library/Frameworks/R.framework/Versions/3.5/Resources/library/flobr/extdata/flobr.pdf </span></a>
-<a class="sourceLine" id="cb1-8" title="8"><span class="co">#&gt;                                                                        blob[133.84 kB]</span></a>
-<a class="sourceLine" id="cb1-9" title="9"><span class="kw"><a href="reference/flob_ext.html">flob_ext</a></span>(flob)</a>
-<a class="sourceLine" id="cb1-10" title="10"><span class="co">#&gt; [1] "pdf"</span></a>
-<a class="sourceLine" id="cb1-11" title="11"></a>
-<a class="sourceLine" id="cb1-12" title="12">new_path &lt;-<span class="st"> </span><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/tempfile">tempfile</a></span>(<span class="dt">fileext =</span> <span class="st">".pdf"</span>)</a>
-<a class="sourceLine" id="cb1-13" title="13"></a>
-<a class="sourceLine" id="cb1-14" title="14"><span class="kw"><a href="reference/unflob.html">unflob</a></span>(flob, new_path)</a>
+<a class="sourceLine" id="cb1-6" title="6"><span class="kw"><a href="https://rdrr.io/r/utils/str.html">str</a></span>(flob)</a>
+<a class="sourceLine" id="cb1-7" title="7"><span class="co">#&gt; List of 1</span></a>
+<a class="sourceLine" id="cb1-8" title="8"><span class="co">#&gt;  $ /Library/Frameworks/R.framework/Versions/3.6/Resources/library/flobr/extdata/flobr.pdf: raw [1:133851] 58 0a 00 00 ...</span></a>
+<a class="sourceLine" id="cb1-9" title="9"><span class="co">#&gt;  - attr(*, "ptype")= raw(0) </span></a>
+<a class="sourceLine" id="cb1-10" title="10"><span class="co">#&gt;  - attr(*, "class")= chr [1:2] "flob" "blob"</span></a>
+<a class="sourceLine" id="cb1-11" title="11"><span class="kw"><a href="reference/flob_name.html">flob_name</a></span>(flob)</a>
+<a class="sourceLine" id="cb1-12" title="12"><span class="co">#&gt; [1] "flobr"</span></a>
+<a class="sourceLine" id="cb1-13" title="13"><span class="kw"><a href="reference/flob_ext.html">flob_ext</a></span>(flob)</a>
+<a class="sourceLine" id="cb1-14" title="14"><span class="co">#&gt; [1] "pdf"</span></a>
 <a class="sourceLine" id="cb1-15" title="15"></a>
-<a class="sourceLine" id="cb1-16" title="16"><span class="kw"><a href="https://www.rdocumentation.org/packages/base/topics/all.equal">all.equal</a></span>(flob, <span class="kw"><a href="reference/flob.html">flob</a></span>(new_path), <span class="dt">check.attributes =</span> <span class="ot">FALSE</span>)</a>
-<a class="sourceLine" id="cb1-17" title="17"><span class="co">#&gt; [1] TRUE</span></a></code></pre></div>
+<a class="sourceLine" id="cb1-16" title="16">new_path &lt;-<span class="st"> </span><span class="kw"><a href="https://rdrr.io/r/base/file.path.html">file.path</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/tempfile.html">tempdir</a></span>(), <span class="st">""</span>)</a>
+<a class="sourceLine" id="cb1-17" title="17"></a>
+<a class="sourceLine" id="cb1-18" title="18"><span class="kw"><a href="reference/unflob.html">unflob</a></span>(flob, new_path)</a>
+<a class="sourceLine" id="cb1-19" title="19"></a>
+<a class="sourceLine" id="cb1-20" title="20"><span class="kw"><a href="https://rdrr.io/r/base/all.equal.html">all.equal</a></span>(flob, <span class="kw"><a href="reference/flob.html">flob</a></span>(<span class="kw"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span>(new_path, <span class="st">"flobr.pdf"</span>)), <span class="dt">check.attributes =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb1-21" title="21"><span class="co">#&gt; [1] TRUE</span></a></code></pre></div>
 </div>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
-<p>To install the latest official release from <a href="https://CRAN.R-project.org/package=checkr">CRAN</a></p>
-<pre><code><a href="https://www.rdocumentation.org/packages/utils/topics/install.packages">install.packages("flobr")</a></code></pre>
-<p>To install the latest development version from the Poisson drat <a href="https://github.com/poissonconsulting/drat">repository</a></p>
-<pre><code>if(!"drat" %in% installed.packages()[,1]) 
-  install.packages("drat")
-drat::addRepo("poissonconsulting")
-install.packages("flobr")</code></pre>
-<p>To install the latest development version from <a href="https://github.com/poissonconsulting/flobr">GitHub</a></p>
-<pre><code>if(!"devtools" %in% installed.packages()[,1]) 
-  install.packages("devtools")
-devtools::install_github("poissonconsulting/err")
-devtools::install_github("poissonconsulting/checkr")
-devtools::install_github("poissonconsulting/flobr")</code></pre>
+<p>To install the latest release version from <a href="https://cran.r-project.org">CRAN</a></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"flobr"</span>)</a></code></pre></div>
+<p>To install the latest development version from <a href="https://github.com/poissonconsulting/hmstimer">GitHub</a></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb3-1" title="1"><span class="co"># install.packages("remotes")</span></a>
+<a class="sourceLine" id="cb3-2" title="2">remotes<span class="op">::</span><span class="kw"><a href="https://rdrr.io/pkg/remotes/man/install_github.html">install_github</a></span>(<span class="st">"poissonconsulting/flobr"</span>)</a></code></pre></div>
 </div>
 <div id="creditation" class="section level2">
 <h2 class="hasAnchor">
@@ -139,7 +138,7 @@ devtools::install_github("poissonconsulting/flobr")</code></pre>
 <a href="#contribution" class="anchor"></a>Contribution</h2>
 <p>Please report any <a href="https://github.com/poissonconsulting/flobr/issues">issues</a>.</p>
 <p><a href="https://github.com/poissonconsulting/flobr/pulls">Pull requests</a> are always welcome.</p>
-<p>Please note that this project is released with a <a href="CONDUCT.html">Contributor Code of Conduct</a>. By participating in this project you agree to abide by its terms.</p>
+<p>Please note that this project is released with a <a href="https://github.com/poissonconsulting/flobr/blob/master/CODE_OF_CONDUCT.md">Contributor Code of Conduct</a>. By contributing, you agree to abide by its terms.</p>
 </div>
 </div>
   </div>
@@ -163,10 +162,17 @@ devtools::install_github("poissonconsulting/flobr")</code></pre>
 <li><small><a href="https://opensource.org/licenses/mit-license.php">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a></small></li>
 </ul>
 </div>
+<div class="community">
+<h2>Community</h2>
+<ul class="list-unstyled">
+<li><a href="CODE_OF_CONDUCT.html">Code of conduct</a></li>
+</ul>
+</div>
 <div class="developers">
 <h2>Developers</h2>
 <ul class="list-unstyled">
-<li>Joe Thorley <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-7683-4592" target="orcid.widget"><img src="https://members.orcid.org/sites/default/files/vector_iD_icon.svg" class="orcid" alt="ORCID" height="16"></a> </li>
+<li>Joe Thorley <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-7683-4592" target="orcid.widget"><img src="https://members.orcid.org/sites/default/files/vector_iD_icon.svg" class="orcid" alt="ORCID"></a> </li>
+<li>Poisson Consulting <br><small class="roles"> Copyright holder, funder </small>  </li>
 </ul>
 </div>
 
@@ -175,17 +181,20 @@ devtools::install_github("poissonconsulting/flobr")</code></pre>
 </div>
 
 
+
       <footer><div class="copyright">
-  <p>Developed by Joe Thorley.</p>
+  <p>Developed by Joe Thorley, Poisson Consulting.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.3.0.9100.</p>
 </div>
+
       </footer>
 </div>
 
   
+
 
   </body>
 </html>

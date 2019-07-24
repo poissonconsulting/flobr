@@ -34,7 +34,7 @@ flob <- function(path, name = "") {
 
   flob <- serialize(flob, NULL)
   flob <- list(flob)
-  flob <- as.blob(flob)
+  flob <- as_blob(flob)
   class(flob) <- c("flob", "blob")
 
   names(flob) <- path
@@ -60,7 +60,7 @@ flob <- function(path, name = "") {
 #' @export
 #' @examples
 #' unflob(flob_obj, tempfile())
-unflob <- function(flob, path) {
+unflob <- function(flob, path = file.path(".", "")) {
   check_flob(flob, old = TRUE)
   check_string(path)
 
