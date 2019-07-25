@@ -8,7 +8,6 @@
 #'  (where the name is the extension of the original file)
 #'  and then serialized before being coerced into a blob.
 #'
-#'
 #' @param path A string of the path to the file.
 #' @param name A string of the name (without the extension) for the flob.
 #' If "" (the default) then the original file name is used.
@@ -56,22 +55,31 @@ flob <- function(path, name = "") {
 #' then it must match the flob's extension.
 #'
 #' @param flob The \code{\link{flob}} to save to file.
-#' @param path A string of the path to the new file.
+#' @param dir A string of the path to the directory to save the file in.
+#' @param name A string of the name (without the extension) for the file.
+#' If "" (the default) then the original file name is used.
+#' @param ext A string of the extension for the file.
+#' If "" (the default) then the original extension is used.
 #' @return An invisible string of the path to the saved file.
 #' @export
 #' @examples
-#' unflob(flob_obj, tempfile())
-unflob <- function(flob, path = file.path(".", "")) {
+#' unflob(flob_obj, tempdir())
+unflob <- function(flob, dir = ".", name = "", ext = "") {
   check_flob(flob, old = TRUE)
-  check_string(path)
+  check_string(dir)
+  check_string(name)
+  check_string(ext)
 
   flob <- unlist(flob)
   flob <- unserialize(flob)
-  name <- names(flob)
-
-  path <- path(path, name)
+  names <- names(flob)
 
   flob <- unlist(flob)
+
+  if(identical(name, "")) name <- file(names)
+  if(identical(ext, "")) ext <- ext(names)
+
+  path <- file.path(dir, paste(name, ext, sep = "."))
 
   writeBin(flob, con = path, endian = "little")
 

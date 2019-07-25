@@ -42,18 +42,15 @@ flob <- flob(path)
 str(flob)
 #> List of 1
 #>  $ /Library/Frameworks/R.framework/Versions/3.6/Resources/library/flobr/extdata/flobr.pdf: raw [1:133851] 58 0a 00 00 ...
-#>  - attr(*, "ptype")= raw(0) 
 #>  - attr(*, "class")= chr [1:2] "flob" "blob"
 flob_name(flob)
 #> [1] "flobr"
 flob_ext(flob)
 #> [1] "pdf"
 
-new_path <- file.path(tempdir(), "")
+unflob(flob, tempdir())
 
-unflob(flob, new_path)
-
-all.equal(flob, flob(paste0(new_path, "flobr.pdf")), check.attributes = FALSE)
+all.equal(flob, flob(file.path(tempdir(), "flobr.pdf")), check.attributes = FALSE)
 #> [1] TRUE
 ```
 
@@ -67,7 +64,7 @@ install.packages("flobr")
 ```
 
 To install the latest development version from
-[GitHub](https://github.com/poissonconsulting/hmstimer)
+[GitHub](https://github.com/poissonconsulting/flobr)
 
 ``` r
 # install.packages("remotes")
