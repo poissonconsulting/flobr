@@ -115,9 +115,9 @@
 <a href="#flobr-020" class="anchor"></a>flobr 0.2.0<small> Unreleased </small>
 </h1>
 <p>By default flobs now include the original file name with the extension.</p>
-<p>To save with a different file name use the name argument to <code><a href="../reference/flob.html">flob()</a></code>. The saved file name can be accessed using <code><a href="../reference/flob_name.html">flob_name()</a></code>.</p>
-<p>In order to unflob to a file using the original filename the path should end with a file separator (this can be achieved using <code>name = file.path(path, "")</code>). By default <code>name = file.path(".", "")</code> which means the file is saved in the working directory.</p>
-<p>If the flob was saved using a previous version of flobr which means it lacks a file name then it is named “file”.</p>
+<p>To read with a different file name use the name argument to <code><a href="../reference/flob.html">flob()</a></code>. The saved file name can be accessed using <code><a href="../reference/flob_name.html">flob_name()</a></code>.</p>
+<p>To write with a different file name use the name argument to <code><a href="../reference/unflob.html">unflob()</a></code>.</p>
+<p>If the flob was read using a previous version of flobr which means it lacks a file name then by default it is written with the file name “file”.</p>
 </div>
     <div id="flobr-010" class="section level1">
 <h1 class="page-header">
