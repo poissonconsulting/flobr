@@ -12,3 +12,4 @@
 ^flobr\.Rproj$
 ^\.Rproj\.user$
 ^build\.R$
+^pkgdown$
