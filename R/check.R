@@ -31,10 +31,11 @@ check_flob <- function(x, old = FALSE, x_name = substitute(x)) {
 
   exint <- unlist(x)
   exint <- try(unserialize(exint), silent = TRUE)
-  if(inherits(exint, "try-error"))
+  if (inherits(exint, "try-error")) {
     err("'", x_name, "' must be a blob of a serialized object")
+  }
 
-  if(old) class(exint) <- "exint"
+  if (old) class(exint) <- "exint"
   check_exint(exint, x_name = paste("serialized element of", x_name))
   invisible(x)
 }

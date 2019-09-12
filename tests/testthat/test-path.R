@@ -1,11 +1,15 @@
 context("path")
 
 test_that("path", {
-  expect_identical(path(file_separator(), "file2.png"),
-                   "/file2.png")
+  expect_identical(
+    path(file_separator(), "file2.png"),
+    "/file2.png"
+  )
 
-  expect_identical(path(file_separator(), ".png"),
-                   "/file.png")
+  expect_identical(
+    path(file_separator(), ".png"),
+    "/file.png"
+  )
 
   expect_error(path(".pdf", ".png"), "path extension must match 'png'")
 

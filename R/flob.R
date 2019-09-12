@@ -76,8 +76,8 @@ unflob <- function(flob, dir = ".", name = "", ext = "") {
 
   flob <- unlist(flob)
 
-  if(identical(name, "")) name <- file(names)
-  if(identical(ext, "")) ext <- ext(names)
+  if (identical(name, "")) name <- file(names)
+  if (identical(ext, "")) ext <- ext(names)
 
   path <- file.path(dir, paste(name, ext, sep = "."))
 

@@ -7,5 +7,3 @@ test_that("err", {
 test_that("p0", {
   expect_identical(p0("a", "thing"), "athing")
 })
-
-
