@@ -12,7 +12,7 @@ Description: Converts files to and from flobs.
     of the original file) and then serialized before being coerced into a blob.
     Flobs are useful for writing and reading files to and from databases.
 License: MIT + file LICENSE
-Depends: R (>= 3.3.0)
+Depends: R (>= 3.3)
 Imports: 
     checkr,
     blob (>= 1.2.0),
