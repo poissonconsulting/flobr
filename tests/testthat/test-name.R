@@ -7,7 +7,8 @@ test_that("name", {
 
   expect_error(
     name("file3.more", "/file2.png"),
-    "name 'file3.more' must not include an extension"
+    "^Name 'file3.more' must not include an extension[.]$",
+    class = "flobr_error"
   )
 
   expect_identical(name("file3", "path/file2.png"), "file3.png")
