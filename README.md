@@ -17,7 +17,7 @@ MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org
 [![status](https://tinyverse.netlify.com/badge/flobr)](https://CRAN.R-project.org/package=flobr)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/flobr)](https://cran.r-project.org/package=flobr)
-![CRAN Downloads](http://cranlogs.r-pkg.org/badges/flobr)
+![CRAN Downloads](https://cranlogs.r-pkg.org/badges/flobr)
 <!-- badges: end -->
 
 ## Introduction
