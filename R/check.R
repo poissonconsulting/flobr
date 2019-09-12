@@ -19,7 +19,7 @@ check_exint <- function(x, x_name) {
 #' @examples
 #' check_flob(flob_obj)
 check_flob <- function(x, old = FALSE, x_name = substitute(x)) {
-  check_flag(old)
+  chk_flag(old)
 
   if (!is.character(x_name)) x_name <- deparse(x_name)
   check_string(x_name)

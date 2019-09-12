@@ -14,6 +14,7 @@ Description: Converts files to and from flobs.
 License: MIT + file LICENSE
 Depends: R (>= 3.3)
 Imports: 
+    chk,
     checkr,
     blob (>= 1.2.0),
     tools
@@ -21,6 +22,7 @@ Suggests:
     covr,
     spelling,
     testthat
+Remotes: poissonconsulting/chk
 URL: https://github.com/poissonconsulting/flobr
 BugReports: https://github.com/poissonconsulting/flobr/issues
 Encoding: UTF-8
