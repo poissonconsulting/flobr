@@ -19,8 +19,8 @@
 #' flob
 #' @export
 flob <- function(path, name = "") {
-  check_string(path)
-  check_string(name)
+  chk_string(path)
+  chk_string(name)
 
   if (!file.exists(path)) stop("file '", path, "' does not exist", call. = FALSE)
 
@@ -66,9 +66,9 @@ flob <- function(path, name = "") {
 #' unflob(flob_obj, tempdir())
 unflob <- function(flob, dir = ".", name = "", ext = "") {
   check_flob(flob, old = TRUE)
-  check_string(dir)
-  check_string(name)
-  check_string(ext)
+  chk_string(dir)
+  chk_string(name)
+  chk_string(ext)
 
   flob <- unlist(flob)
   flob <- unserialize(flob)

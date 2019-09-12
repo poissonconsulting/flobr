@@ -29,7 +29,7 @@ test_that("flob_noname", {
 test_that("package with pdf", {
   path <- system.file("extdata", "flobr.pdf", package = "flobr", mustWork = TRUE)
 
-  expect_error(flob(1), "path must be class character")
+  expect_error(flob(1), "^`path` must be a string [(]non-missing character scalar[)][.]$")
   expect_error(flob(paste(path, "1")), "pdf 1' does not exist")
   flob <- flob(path)
   expect_true(is_flob(flob))

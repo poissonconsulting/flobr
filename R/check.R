@@ -22,7 +22,7 @@ check_flob <- function(x, old = FALSE, x_name = substitute(x)) {
   chk_flag(old)
 
   if (!is.character(x_name)) x_name <- deparse(x_name)
-  check_string(x_name)
+  chk_string(x_name)
 
   check_inherits(x, "flob", x_name = x_name)
   check_inherits(x, "blob", x_name = x_name)
