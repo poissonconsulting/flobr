@@ -1,2 +1,2 @@
-#' @import blob checkr chk
+#' @import blob chk lifecycle
 NULL

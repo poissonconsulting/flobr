@@ -65,7 +65,7 @@ flob <- function(path, name = "") {
 #' @examples
 #' unflob(flob_obj, tempdir())
 unflob <- function(flob, dir = ".", name = "", ext = "") {
-  check_flob(flob, old = TRUE)
+  chk_flob(flob, old = TRUE)
   chk_string(dir)
   chk_string(name)
   chk_string(ext)
