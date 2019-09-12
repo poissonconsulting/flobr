@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 
 <!-- badges: start -->
 [![Lifecycle](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
-[![Travis build status](https://travis-ci.org/poissonconsulting/flobr.svg?branch=master)](https://travis-ci.org/poissonconsulting/flobr)
+[![Travis build status](https://travis-ci.com/poissonconsulting/flobr.svg?branch=master)](https://travis-ci.com/poissonconsulting/flobr)
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/poissonconsulting/flobr?branch=master&svg=true)](https://ci.appveyor.com/project/poissonconsulting/flobr)
 [![Coverage status](https://codecov.io/gh/poissonconsulting/flobr/branch/master/graph/badge.svg)](https://codecov.io/github/poissonconsulting/flobr?branch=master)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
