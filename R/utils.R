@@ -7,7 +7,9 @@
 #' @examples
 #' flob_ext(flob_obj)
 flob_ext <- function(flob) {
-  chk_flob(flob, old = TRUE)
+  if(is_chk_on()) {
+    chk_flob(flob, old = TRUE)
+  }
   flob <- unlist(flob)
   flob <- unserialize(flob)
   names <- names(flob)
@@ -26,7 +28,9 @@ flob_ext <- function(flob) {
 #' @examples
 #' flob_name(flob_obj)
 flob_name <- function(flob) {
-  chk_flob(flob, old = TRUE)
+  if(is_chk_on()) {
+    chk_flob(flob, old = TRUE)
+  }
   flob <- unlist(flob)
   flob <- unserialize(flob)
   names <- names(flob)
@@ -41,6 +45,4 @@ flob_name <- function(flob) {
 #' @export
 #' @examples
 #' is_flob(flob_obj)
-is_flob <- function(x) {
-  inherits(x, "flob")
-}
+is_flob <- function(x) inherits(x, "flob")

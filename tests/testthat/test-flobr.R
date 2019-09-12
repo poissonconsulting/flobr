@@ -34,7 +34,8 @@ test_that("package with pdf", {
 
   expect_error(flob(1), "^`path` must be a string [(]non-missing character scalar[)][.]$",
                class = "chk_error")
-  expect_error(flob(paste(path, "1")), "pdf 1' does not exist")
+  expect_error(flob(paste(path, "1")), "Can't find file '.*flobr.pdf 1'.",
+               class = "chk_error")
   flob <- flob(path)
   expect_true(is_flob(flob))
   chk_flob(flob)

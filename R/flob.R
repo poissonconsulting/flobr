@@ -19,10 +19,8 @@
 #' flob
 #' @export
 flob <- function(path, name = "") {
-  chk_string(path)
+  chk_string(path); chk_file(path)
   chk_string(name)
-
-  if (!file.exists(path)) stop("file '", path, "' does not exist", call. = FALSE)
 
   n <- file.info(path)$size
   flob <- readBin(path, what = "integer", n = n, endian = "little")
@@ -65,11 +63,12 @@ flob <- function(path, name = "") {
 #' @examples
 #' unflob(flob_obj, tempdir())
 unflob <- function(flob, dir = ".", name = "", ext = "") {
-  chk_flob(flob, old = TRUE)
-  chk_string(dir)
-  chk_string(name)
-  chk_string(ext)
-
+  if(is_chk_on()) {
+    chk_flob(flob, old = TRUE)
+    chk_string(dir)
+    chk_string(name)
+    chk_string(ext)
+  }
   flob <- unlist(flob)
   flob <- unserialize(flob)
   names <- names(flob)
