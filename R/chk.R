@@ -1,5 +1,7 @@
 chk_exint <- function(x, x_name = NULL) {
-  if(vld_exint(x)) return(invisible())
+  if (vld_exint(x)) {
+    return(invisible())
+  }
   if (is.null(x_name)) x_name <- deparse_backtick(substitute(x))
 
   chk_s3_class(x, "exint", x_name = x_name)
@@ -22,7 +24,9 @@ chk_exint <- function(x, x_name = NULL) {
 #' @examples
 #' chk_flob(flobr::flob_obj)
 chk_flob <- function(x, old = FALSE, x_name = NULL) {
-  if(vld_flob(x, old = old)) return(invisible())
+  if (vld_flob(x, old = old)) {
+    return(invisible())
+  }
 
   if (is.null(x_name)) x_name <- deparse_backtick(substitute(x))
 
@@ -31,9 +35,10 @@ chk_flob <- function(x, old = FALSE, x_name = NULL) {
 
   exint <- unlist(x)
   exint <- try(unserialize(exint), silent = TRUE)
-  if (inherits(exint, "try-error"))
+  if (inherits(exint, "try-error")) {
     abort_chk(x_name, " must be a blob of a serialized object.")
+  }
 
-  if(!vld_false(old)) class(exint) <- "exint"
+  if (!vld_false(old)) class(exint) <- "exint"
   chk_exint(exint, x_name = paste("serialized element of", x_name))
 }

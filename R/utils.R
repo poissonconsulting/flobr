@@ -7,7 +7,7 @@
 #' @examples
 #' flob_ext(flob_obj)
 flob_ext <- function(flob) {
-  if(is_chk_on()) {
+  if (is_chk_on()) {
     chk_flob(flob, old = TRUE)
   }
   flob <- unlist(flob)
@@ -28,7 +28,7 @@ flob_ext <- function(flob) {
 #' @examples
 #' flob_name(flob_obj)
 flob_name <- function(flob) {
-  if(is_chk_on()) {
+  if (is_chk_on()) {
     chk_flob(flob, old = TRUE)
   }
   flob <- unlist(flob)

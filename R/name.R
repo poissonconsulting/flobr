@@ -5,8 +5,11 @@ name <- function(name, path) {
     return(path)
   }
 
-  if (grepl("[.]", name)) err("Name '", name, "' must not include an extension.",
-                              .subclass = "flobr_error")
+  if (grepl("[.]", name)) {
+    err("Name '", name, "' must not include an extension.",
+      .subclass = "flobr_error"
+    )
+  }
 
   p0(name, ".", tools::file_ext(path))
 }

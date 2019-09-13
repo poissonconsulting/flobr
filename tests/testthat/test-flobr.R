@@ -4,7 +4,7 @@ test_that("flob_old", {
   expect_true(is_flob(flob_old))
   expect_error(
     chk_flob(flob_old),
-    "^serialized element of `flob_old` must inherit from S3 class 'exint'[.]",
+    "^Serialized element of `flob_old` must inherit from S3 class 'exint'[.]",
     class = "chk_error"
   )
   expect_null(chk_flob(flob_old, old = TRUE))
@@ -33,9 +33,11 @@ test_that("package with pdf", {
   path <- system.file("extdata", "flobr.pdf", package = "flobr", mustWork = TRUE)
 
   expect_error(flob(1), "^`path` must be a string [(]non-missing character scalar[)][.]$",
-               class = "chk_error")
-  expect_error(flob(paste(path, "1")), "Can't find file '.*flobr.pdf 1'.",
-               class = "chk_error")
+    class = "chk_error"
+  )
+  expect_error(flob(paste(path, "1")), "Can't find the following file: '.*flobr.pdf 1'.",
+    class = "chk_error"
+  )
   flob <- flob(path)
   expect_true(is_flob(flob))
   chk_flob(flob)

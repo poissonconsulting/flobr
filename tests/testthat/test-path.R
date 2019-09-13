@@ -12,7 +12,8 @@ test_that("path", {
   )
 
   expect_error(path(".pdf", ".png"), "^Path extension must match 'png'[.]$",
-               class = "flobr_error")
+    class = "flobr_error"
+  )
 
   expect_identical(path("file2.pdf", ".pdf"), "file2.pdf")
   expect_identical(path("path/file2.pdf", ".pdf"), "path/file2.pdf")

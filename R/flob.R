@@ -19,7 +19,8 @@
 #' flob
 #' @export
 flob <- function(path, name = "") {
-  chk_string(path); chk_file(path)
+  chk_string(path)
+  chk_file(path)
   chk_string(name)
 
   n <- file.info(path)$size
@@ -63,7 +64,7 @@ flob <- function(path, name = "") {
 #' @examples
 #' unflob(flob_obj, tempdir())
 unflob <- function(flob, dir = ".", name = "", ext = "") {
-  if(is_chk_on()) {
+  if (is_chk_on()) {
     chk_flob(flob, old = TRUE)
     chk_string(dir)
     chk_string(name)
