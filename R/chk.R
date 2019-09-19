@@ -2,7 +2,7 @@ chk_exint <- function(x, x_name = NULL) {
   if (vld_exint(x)) {
     return(invisible())
   }
-  if (is.null(x_name)) x_name <- deparse_backtick(substitute(x))
+  if (is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
 
   chk_s3_class(x, "exint", x_name = x_name)
   chk_scalar(x, x_name = x_name)
@@ -28,7 +28,7 @@ chk_flob <- function(x, old = FALSE, x_name = NULL) {
     return(invisible())
   }
 
-  if (is.null(x_name)) x_name <- deparse_backtick(substitute(x))
+  if (is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
 
   chk_s3_class(x, "flob", x_name = x_name)
   chk_scalar(x, x_name = x_name)

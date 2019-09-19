@@ -1,6 +1,6 @@
 Package: flobr
 Title: Convert Files to and from Binary Objects (BLOBs)
-Version: 0.2.0.9004
+Version: 0.2.0.9005
 Authors@R: c(
     person("Joe", "Thorley", , "joe@poissonconsulting.ca", c("aut", "cre"), comment = c(ORCID = "0000-0002-7683-4592")),
     person("Poisson Consulting", role = c("cph", "fnd"))
@@ -14,7 +14,7 @@ Description: Converts files to and from flobs.
 License: MIT + file LICENSE
 Depends: R (>= 3.5)
 Imports: 
-    chk,
+    chk (>= 0.0.1.9025),
     blob (>= 1.2.0),
     tools,
     lifecycle

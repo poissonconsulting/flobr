@@ -20,6 +20,6 @@ check_flob <- function(x, old = FALSE, x_name = NULL) {
     what = "check_flob()",
     with = "chk_flob()"
   )
-  if (is.null(x_name)) x_name <- deparse_backtick(substitute(x))
+  if (is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
   chk_flob(x, old = old, x_name = x_name)
 }
