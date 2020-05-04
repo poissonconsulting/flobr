@@ -4,7 +4,9 @@
 \name{flob_obj}
 \alias{flob_obj}
 \title{A flob Object}
-\format{An object of class \code{flob} (inherits from \code{blob}) of length 1.}
+\format{
+An object of class \code{flob} (inherits from \code{blob}) of length 1.
+}
 \usage{
 flob_obj
 }
