@@ -6,7 +6,7 @@
 \alias{flobr-package}
 \title{flobr: Convert Files to and from Binary Objects (BLOBs)}
 \description{
-\if{html}{\figure{logo.png}{options: align='right'}}
+\if{html}{\figure{logo.png}{options: align='right' alt='logo' width='120'}}
 
 Converts files to and from flobs. 
     A flob is a file that was 
@@ -24,7 +24,7 @@ Useful links:
 
 }
 \author{
-\strong{Maintainer}: Joe Thorley \email{joe@poissonconsulting.ca} (0000-0002-7683-4592)
+\strong{Maintainer}: Joe Thorley \email{joe@poissonconsulting.ca} (\href{https://orcid.org/0000-0002-7683-4592}{ORCID})
 
 Other contributors:
 \itemize{
