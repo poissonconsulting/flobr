@@ -10,6 +10,6 @@
 
 *.html
 
-docs
-inst/docs
-scripts
+docs/
+inst/docs/
+scripts/
