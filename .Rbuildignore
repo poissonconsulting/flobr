@@ -13,3 +13,4 @@
 ^\.github$
 ^\.gitignore$
 ^scripts$
+^revdep$
