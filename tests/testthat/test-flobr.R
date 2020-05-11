@@ -33,8 +33,8 @@ test_that("package with pdf", {
   path <- system.file("extdata", "flobr.pdf", package = "flobr", mustWork = TRUE)
 
   expect_error(flob(1),
-               "^`path` must be a string [(]non-missing character scalar[)][.]$",
-               class = "chk_error"
+    "^`path` must be a string [(]non-missing character scalar[)][.]$",
+    class = "chk_error"
   )
   expect_error(
     flob(paste(path, "1")),
