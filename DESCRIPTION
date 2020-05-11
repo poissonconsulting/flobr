@@ -29,3 +29,4 @@ LazyData: true
 RoxygenNote: 7.1.0
 RdMacros: lifecycle
 Language: en-US
+Roxygen: list(markdown = TRUE)

@@ -7,7 +7,7 @@
 flob_ext(flob)
 }
 \arguments{
-\item{flob}{A \code{\link{flob}}}
+\item{flob}{A \code{\link[=flob]{flob()}}}
 }
 \value{
 A string of the extension of the original file.
@@ -19,5 +19,5 @@ Flob Extension
 flob_ext(flob_obj)
 }
 \seealso{
-\code{\link{flobr}} and \code{\link{flob_name}}.
+\code{\link[=flobr]{flobr()}} and \code{\link[=flob_name]{flob_name()}}.
 }

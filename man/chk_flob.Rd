@@ -15,14 +15,14 @@ chk_flob(x, old = FALSE, x_name = NULL)
 }
 \value{
 \code{NULL}, invisibly. Called for the side effect of throwing an error
-  if the condition is not met.
+if the condition is not met.
 }
 \description{
-Checks whether an object is a \code{\link{flob}}.
+Checks whether an object is a \code{\link[=flob]{flob()}}.
 }
 \examples{
 chk_flob(flobr::flob_obj)
 }
 \seealso{
-\code{\link{flobr}} and \code{\link{chk_flob}()}.
+\code{\link[=flobr]{flobr()}} and \code{\link[=chk_flob]{chk_flob()}}.
 }

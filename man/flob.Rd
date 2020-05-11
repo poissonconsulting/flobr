@@ -17,13 +17,13 @@ A named flob of the file.
 }
 \description{
 Converts a file into a flob.
- Flobs are useful for saving files in databases.
+Flobs are useful for saving files in databases.
 }
 \details{
 A flob is a file that was read into binary in integer-mode as little endian,
- saved as the single element of a named list
- (where the name is the extension of the original file)
- and then serialized before being coerced into a blob.
+saved as the single element of a named list
+(where the name is the extension of the original file)
+and then serialized before being coerced into a blob.
 }
 \examples{
 path <- system.file("extdata", "flobr.pdf", package = "flobr")
@@ -31,5 +31,5 @@ flob <- flob(path)
 flob
 }
 \seealso{
-\code{\link{flobr}}
+\code{\link[=flobr]{flobr()}}
 }

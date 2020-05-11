@@ -12,7 +12,7 @@
 #' @param name A string of the name (without the extension) for the flob.
 #' If "" (the default) then the original file name is used.
 #' @return A named flob of the file.
-#' @seealso \code{\link{flobr}}
+#' @seealso [flobr()]
 #' @examples
 #' path <- system.file("extdata", "flobr.pdf", package = "flobr")
 #' flob <- flob(path)
@@ -43,7 +43,7 @@ flob <- function(path, name = "") {
 
 #' Unflob to File
 #'
-#' Converts a \code{\link{flob}} back to its original file format.
+#' Converts a [flob()] back to its original file format.
 #'
 #' If path ends with a file separator then the name and extension of the flob is added.
 #' If the flob is an older flob that was not saved with a name then it is named 'file'.
@@ -53,7 +53,7 @@ flob <- function(path, name = "") {
 #' Alternatively if path also includes an extension
 #' then it must match the flob's extension.
 #'
-#' @param flob The \code{\link{flob}} to save to file.
+#' @param flob The [flob()] to save to file.
 #' @param dir A string of the path to the directory to save the file in.
 #' @param name A string of the name (without the extension) for the file.
 #' If "" (the default) then the original file name is used.

@@ -15,12 +15,12 @@ vld_flob(x, old = FALSE)
 A flag indicating whether the object passed the test.
 }
 \description{
-Validates a \code{\link{flob}} object.
+Validates a \code{\link[=flob]{flob()}} object.
 }
 \examples{
 vld_flob(flobr::flob_obj)
 vld_flob(1)
 }
 \seealso{
-\code{\link{chk_flob}()}
+\code{\link[=chk_flob]{chk_flob()}}
 }

@@ -11,7 +11,7 @@ An object of class \code{flob} (inherits from \code{blob}) of length 1.
 flob_obj
 }
 \description{
-A \code{\link{flob}} of \code{'inst/extdata/flobr.pdf'}.
+A \code{\link[=flob]{flob()}} of \code{'inst/extdata/flobr.pdf'}.
 }
 \examples{
 flob_obj

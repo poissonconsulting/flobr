@@ -1,6 +1,6 @@
 #' Deprecated Functions
 #'
-#' Deprecated \code{pkgtemplate} functions.
+#' Deprecated `pkgtemplate` functions.
 #'
 #' @keywords internal
 #' @name pkgtemplate_deprecated

@@ -10,7 +10,7 @@ is_flob(x)
 \item{x}{An object to test}
 }
 \value{
-A flag indicating whether x inherits from \code{\link{flob}}.
+A flag indicating whether x inherits from \code{\link[=flob]{flob()}}.
 }
 \description{
 Is flob
@@ -19,5 +19,5 @@ Is flob
 is_flob(flob_obj)
 }
 \seealso{
-\code{\link{flobr}}
+\code{\link[=flobr]{flobr()}}
 }

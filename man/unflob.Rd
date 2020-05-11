@@ -7,7 +7,7 @@
 unflob(flob, dir = ".", name = "", ext = "")
 }
 \arguments{
-\item{flob}{The \code{\link{flob}} to save to file.}
+\item{flob}{The \code{\link[=flob]{flob()}} to save to file.}
 
 \item{dir}{A string of the path to the directory to save the file in.}
 
@@ -21,7 +21,7 @@ If "" (the default) then the original extension is used.}
 An invisible string of the path to the saved file.
 }
 \description{
-Converts a \code{\link{flob}} back to its original file format.
+Converts a \code{\link[=flob]{flob()}} back to its original file format.
 }
 \details{
 If path ends with a file separator then the name and extension of the flob is added.

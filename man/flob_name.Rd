@@ -7,7 +7,7 @@
 flob_name(flob)
 }
 \arguments{
-\item{flob}{A \code{\link{flob}}}
+\item{flob}{A \code{\link[=flob]{flob()}}}
 }
 \value{
 A character vector of the name of the file (without the extension).
@@ -20,5 +20,5 @@ If the flob does not have a file name it returns "file".
 flob_name(flob_obj)
 }
 \seealso{
-\code{\link{flobr}} and \code{\link{flob_ext}}.
+\code{\link[=flobr]{flobr()}} and \code{\link[=flob_ext]{flob_ext()}}.
 }

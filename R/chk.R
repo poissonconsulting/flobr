@@ -13,13 +13,13 @@ chk_exint <- function(x, x_name = NULL) {
 
 #' Check flob
 #'
-#' Checks whether an object is a \code{\link{flob}}.
+#' Checks whether an object is a [flob()].
 #'
 #' @inheritParams chk::chk_flag
 #' @param old A flag indicating whether old flobs are permitted.
-#' @return \code{NULL}, invisibly. Called for the side effect of throwing an error
+#' @return `NULL`, invisibly. Called for the side effect of throwing an error
 #'   if the condition is not met.
-#' @seealso \code{\link{flobr}} and \code{\link{chk_flob}()}.
+#' @seealso [flobr()] and [chk_flob()].
 #' @export
 #' @examples
 #' chk_flob(flobr::flob_obj)

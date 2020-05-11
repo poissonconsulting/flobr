@@ -5,12 +5,12 @@ vld_exint <- function(x) {
 
 #' Validate flob Object
 #'
-#' Validates a \code{\link{flob}} object.
+#' Validates a [flob()] object.
 #'
 #' @param x The object to check.
 #' @param old A flag indicating whether old flobs are permitted.
 #' @return A flag indicating whether the object passed the test.
-#' @seealso \code{\link{chk_flob}()}
+#' @seealso [chk_flob()]
 #' @export
 #' @examples
 #' vld_flob(flobr::flob_obj)
