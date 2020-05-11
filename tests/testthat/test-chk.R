@@ -17,5 +17,6 @@ test_that("chk_flob", {
 
   x <- list(x = 1)
   class(x) <- "flob"
-  expect_error(chk_flob(x), "^`x` must be a blob of a serialized object[.]$", class = "chk_error")
+  expect_error(chk_flob(x), "^`x` must be a blob of a serialized object[.]$",
+               class = "chk_error")
 })

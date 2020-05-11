@@ -32,10 +32,13 @@ test_that("flob_noname", {
 test_that("package with pdf", {
   path <- system.file("extdata", "flobr.pdf", package = "flobr", mustWork = TRUE)
 
-  expect_error(flob(1), "^`path` must be a string [(]non-missing character scalar[)][.]$",
-    class = "chk_error"
+  expect_error(flob(1),
+               "^`path` must be a string [(]non-missing character scalar[)][.]$",
+               class = "chk_error"
   )
-  expect_error(flob(paste(path, "1")), "^`path` must specify an existing file [(]'.*[.]pdf 1' can't be found[)][.]",
+  expect_error(
+    flob(paste(path, "1")),
+    "^`path` must specify an existing file [(]'.*[.]pdf 1' can't be found[)][.]",
     class = "chk_error"
   )
   flob <- flob(path)
