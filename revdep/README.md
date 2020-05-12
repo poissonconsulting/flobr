@@ -10,7 +10,7 @@
 |collate  |en_CA.UTF-8                  |
 |ctype    |en_CA.UTF-8                  |
 |tz       |America/Vancouver            |
-|date     |2020-05-11                   |
+|date     |2020-05-12                   |
 
 # Dependencies
 
@@ -18,6 +18,7 @@
 |:-------|:-----|:----------|:--|
 |flobr   |0.2.0 |0.2.1      |*  |
 |chk     |NA    |0.4.0.9006 |*  |
+|vctrs   |NA    |0.3.0      |*  |
 
 # Revdeps
 
