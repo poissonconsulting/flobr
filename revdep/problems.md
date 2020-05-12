@@ -20,12 +20,12 @@ Run `revdep_details(,"dbflobr")` for more info
      ERROR
     Running the tests in ‘tests/testthat.R’ failed.
     Last 13 lines of output:
-      [90m 4. [39mflobr::flob_ext(flob2)
-      [90m 5. [39mflobr::chk_flob(flob, old = TRUE)
-      [90m 6. [39mchk::chk_s3_class(x, "flob", x_name = x_name)
-      [90m 7. [39mchk::abort_chk(...)
-      [90m 8. [39mchk::err(..., n = n, tidy = tidy, .subclass = "chk_error")
-      [90m 9. [39mrlang::exec(abort, msg, .subclass = .subclass, !!!args[named])
+      [90m 4. [39mflobr::flob_ext(flob2)
+      [90m 5. [39mflobr::chk_flob(flob, old = TRUE)
+      [90m 6. [39mchk::chk_s3_class(x, "flob", x_name = x_name)
+      [90m 7. [39mchk::abort_chk(...)
+      [90m 8. [39mchk::err(..., n = n, tidy = tidy, .subclass = "chk_error")
+      [90m 9. [39mrlang::exec(abort, msg, .subclass = .subclass, !!!args[named])
       
       ══ testthat results  ═══════════════════════════════════════════════════════════
       [ OK: 86 | SKIPPED: 0 | WARNINGS: 2 | FAILED: 3 ]
