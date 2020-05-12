@@ -67,12 +67,11 @@ flob <- function(path, name = "") {
 #' @examples
 #' unflob(flob_obj, tempdir())
 unflob <- function(flob, dir = ".", name = "", ext = "") {
-  if (is_chk_on()) {
-    chk_flob(flob, old = TRUE)
-    chk_string(dir)
-    chk_string(name)
-    chk_string(ext)
-  }
+  chk_flob(flob, old = TRUE)
+  chk_string(dir)
+  chk_string(name)
+  chk_string(ext)
+
   flob <- unlist(flob)
   flob <- unserialize(flob)
   names <- names(flob)
