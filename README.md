@@ -12,12 +12,9 @@ status](https://github.com/poissonconsulting/flobr/workflows/R-CMD-check/badge.s
 status](https://codecov.io/gh/poissonconsulting/flobr/branch/master/graph/badge.svg)](https://codecov.io/github/poissonconsulting/flobr?branch=master)
 [![License:
 MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![status](https://tinyverse.netlify.com/badge/flobr)](https://CRAN.R-project.org/package=flobr)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/flobr)](https://cran.r-project.org/package=flobr)
-![CRAN Downloads](https://cranlogs.r-pkg.org/badges/flobr) [![Codecov
-test
-coverage](https://codecov.io/gh/poissonconsulting/flobr/branch/master/graph/badge.svg)](https://codecov.io/gh/poissonconsulting/flobr?branch=master)
+![CRAN Downloads](https://cranlogs.r-pkg.org/badges/flobr)
 <!-- badges: end -->
 
 ## Introduction
@@ -44,10 +41,6 @@ str(flob)
 #>  $ /Library/Frameworks/R.framework/Versions/4.0/Resources/library/flobr/extdata/flobr.pdf: raw [1:133851] 58 0a 00 00 ...
 #>  - attr(*, "class")= chr [1:2] "flob" "blob"
 flob_name(flob)
-#> Warning: `is_chk_on()` is deprecated as of chk 0.2.0.
-#> This approach is no longer recommended
-#> This warning is displayed once every 8 hours.
-#> Call `lifecycle::last_warnings()` to see where this warning was generated.
 #> [1] "flobr"
 flob_ext(flob)
 #> [1] "pdf"
