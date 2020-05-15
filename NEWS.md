@@ -1,6 +1,6 @@
 # flobr 0.2.1
 
-- Replace dependency on checkr by depedency on chk.
+- Replace dependency on checkr by dependency on chk.
 - Errors now in tidyverse style.
 
 # flobr 0.2.0
