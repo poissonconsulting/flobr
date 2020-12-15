@@ -30,42 +30,36 @@ Flobs are useful for writing and reading files to and from databases.
 
 ## Demonstration
 
-``` r
-library(flobr)
+    library(flobr)
 
-path <- system.file("extdata", "flobr.pdf", package = "flobr")
+    path <- system.file("extdata", "flobr.pdf", package = "flobr")
 
-flob <- flob(path)
-str(flob)
-#> List of 1
-#>  $ /Library/Frameworks/R.framework/Versions/4.0/Resources/library/flobr/extdata/flobr.pdf: raw [1:133851] 58 0a 00 00 ...
-#>  - attr(*, "class")= chr [1:2] "flob" "blob"
-flob_name(flob)
-#> [1] "flobr"
-flob_ext(flob)
-#> [1] "pdf"
+    flob <- flob(path)
+    str(flob)
+    #> List of 1
+    #>  $ /Library/Frameworks/R.framework/Versions/4.0/Resources/library/flobr/extdata/flobr.pdf: raw [1:133851] 58 0a 00 00 ...
+    #>  - attr(*, "class")= chr [1:2] "flob" "blob"
+    flob_name(flob)
+    #> [1] "flobr"
+    flob_ext(flob)
+    #> [1] "pdf"
 
-unflob(flob, tempdir())
+    unflob(flob, tempdir())
 
-all.equal(flob, flob(file.path(tempdir(), "flobr.pdf")), check.attributes = FALSE)
-#> [1] TRUE
-```
+    all.equal(flob, flob(file.path(tempdir(), "flobr.pdf")), check.attributes = FALSE)
+    #> [1] TRUE
 
 ## Installation
 
 To install the latest release from [CRAN](https://cran.r-project.org)
 
-``` r
-install.packages("flobr")
-```
+    install.packages("flobr")
 
 To install the developmental version from
 [GitHub](https://github.com/poissonconsulting/flobr)
 
-``` r
-# install.packages("remotes")
-remotes::install_github("poissonconsulting/flobr")
-```
+    # install.packages("remotes")
+    remotes::install_github("poissonconsulting/flobr")
 
 ## Creditation
 
