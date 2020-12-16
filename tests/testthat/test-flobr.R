@@ -74,3 +74,62 @@ test_that("package with pdf", {
   expect_identical(flob_name(flob2), flob_name(flob))
   expect_equivalent(flob2, flob)
 })
+
+test_that("blob arg works", {
+  path <- system.file("extdata", "flobr.pdf",
+                      package = "flobr",
+                      mustWork = TRUE
+  )
+
+  flob <- flobr::flob(path)
+  not_flob <- "asd"
+
+  expect_error(
+    unflob(blob_obj, tempdir(), blob = FALSE),
+    "`flob` must inherit from S3 class 'flob'.",
+    class = "chk_error"
+  )
+
+  expect_error(
+    unflob(blob_obj, tempdir(), blob = TRUE),
+    "`name` and `ext` must be provided for blob objects."
+  )
+
+  expect_error(
+    unflob(not_flob, tempdir(), blob = NA),
+    "At least one of the following conditions must be met:\n* `flob` must inherit from S3 class 'blob'.\n* `flob` must inherit from S3 class 'flob'.",
+    fixed = TRUE,
+    class = "chk_error"
+  )
+
+
+  expect_identical(
+    unflob(blob_obj, tempdir(), blob = TRUE, name = "file_name", ext = "pdf"),
+    file.path(tempdir(), paste("file_name", "pdf", sep = "."))
+  )
+
+  expect_identical(
+    unflob(flob, tempdir(), blob = TRUE, name = "file_name", ext = "pdf"),
+    file.path(tempdir(), paste("file_name", "pdf", sep = "."))
+  )
+
+  expect_identical(
+    unflob(flob, tempdir(), blob = TRUE),
+    file.path(tempdir(), paste("flobr", "pdf", sep = "."))
+  )
+
+  expect_identical(
+    unflob(flob, tempdir(), blob = NA, name = "file_name", ext = "pdf"),
+    file.path(tempdir(), paste("file_name", "pdf", sep = "."))
+  )
+
+  expect_identical(
+    unflob(blob_obj, tempdir(), blob = NA, name = "file_name", ext = "pdf"),
+    file.path(tempdir(), paste("file_name", "pdf", sep = "."))
+  )
+
+})
+
+
+
+
