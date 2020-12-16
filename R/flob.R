@@ -62,33 +62,33 @@ flob <- function(path, name = "") {
 #' If "" (the default) then the original file name is used.
 #' @param ext A string of the extension for the file.
 #' If "" (the default) then the original extension is used.
-#' @param blob A flag specifying whether to process blobs instead of flobs.
+#' @param blob A logical scalar specifying whether to process blobs instead of flobs.
 #' If NA, either will be accepted, but blobs require that ext and name be provided.
+#' @param check A flag indicating whether to run comprehensive checks on user input.
 #' @return An invisible string of the path to the saved file.
 #' @export
 #' @examples
 #' unflob(flob_obj, tempdir())
-unflob <- function(flob, dir = ".", name = "", ext = "", blob = FALSE) {
+unflob <- function(flob, dir = ".", name = "", ext = "", blob = FALSE, check = TRUE) {
 
   chk_string(dir)
   chk_string(name)
   chk_string(ext)
   chk_lgl(blob)
+  chk_flag(check)
 
-  if (vld_false(blob)) chk_flob(flob, old = TRUE)
-
-  if (vld_true(blob)) {
-    chk_blob(flob)
-    if (identical(name, "") | identical(ext, "")) err("name and ext must be provided if blob = TRUE")
-  } else {
-    if(!inherits(flob, c("flob", "blob"))) err(deparse_backtick_chk(substitute(flob)),
-                                               " must inherit from S3 class 'blob' or 'flob'.")
-    if (inherits(flob, c("flob"))) {
+  if(check){
+    if (vld_false(blob)){
       chk_flob(flob, old = TRUE)
-    } else {
+    } else if (vld_true(blob)){
       chk_blob(flob)
-      if(identical(name, "") | identical(ext, "")) err("name and ext must be provided for blob objects")
+    } else {
+      chkor(chk_blob(flob), chk_flob(flob, old = TRUE))
     }
+  }
+
+  if(is_blob(flob) && !is_flob(flob)) {
+    if (identical(name, "") || identical(ext, "")) err("`name` and `ext` must be provided for blob objects.")
   }
 
   flob <- unlist(flob)
