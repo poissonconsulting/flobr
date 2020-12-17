@@ -96,12 +96,16 @@ test_that("blob arg works", {
   )
 
   expect_error(
+    unflob(flob, tempdir(), blob = TRUE),
+    "`name` and `ext` must be provided for blob objects."
+  )
+
+  expect_error(
     unflob(not_flob, tempdir(), blob = NA),
     "At least one of the following conditions must be met:\n* `flob` must inherit from S3 class 'blob'.\n* `flob` must inherit from S3 class 'flob'.",
     fixed = TRUE,
     class = "chk_error"
   )
-
 
   expect_identical(
     unflob(blob_obj, tempdir(), blob = TRUE, name = "file_name", ext = "pdf"),
@@ -111,11 +115,6 @@ test_that("blob arg works", {
   expect_identical(
     unflob(flob, tempdir(), blob = TRUE, name = "file_name", ext = "pdf"),
     file.path(tempdir(), paste("file_name", "pdf", sep = "."))
-  )
-
-  expect_identical(
-    unflob(flob, tempdir(), blob = TRUE),
-    file.path(tempdir(), paste("flobr", "pdf", sep = "."))
   )
 
   expect_identical(
@@ -129,7 +128,4 @@ test_that("blob arg works", {
   )
 
 })
-
-
-
 

@@ -82,13 +82,11 @@ unflob <- function(flob, dir = ".", name = "", ext = "", blob = FALSE, check = T
       chk_flob(flob, old = TRUE)
     } else if (vld_true(blob)){
       chk_blob(flob)
-    } else {
+      if (identical(name, "") || identical(ext, "")) err("`name` and `ext` must be provided for blob objects.")
+    } else if (!vld_flob(flob)) {
       chkor(chk_blob(flob), chk_flob(flob, old = TRUE))
+      if (identical(name, "") || identical(ext, "")) err("`name` and `ext` must be provided for blob objects.")
     }
-  }
-
-  if(is_blob(flob) && !is_flob(flob)) {
-    if (identical(name, "") || identical(ext, "")) err("`name` and `ext` must be provided for blob objects.")
   }
 
   flob <- unlist(flob)
