@@ -89,42 +89,56 @@ test_that("blob arg works", {
     "`flob` must inherit from S3 class 'flob'.",
     class = "chk_error"
   )
-
   expect_error(
     unflob(blob_obj, tempdir(), blob = TRUE),
     "`name` and `ext` must be provided for blob objects."
   )
-
   expect_error(
     unflob(flob, tempdir(), blob = TRUE),
     "`name` and `ext` must be provided for blob objects."
   )
-
   expect_error(
     unflob(not_flob, tempdir(), blob = NA),
     "At least one of the following conditions must be met:\n* `flob` must inherit from S3 class 'blob'.\n* `flob` must inherit from S3 class 'flob'.",
     fixed = TRUE,
     class = "chk_error"
   )
-
   expect_identical(
     unflob(blob_obj, tempdir(), blob = TRUE, name = "file_name", ext = "pdf"),
     file.path(tempdir(), paste("file_name", "pdf", sep = "."))
   )
-
   expect_identical(
     unflob(flob, tempdir(), blob = TRUE, name = "file_name", ext = "pdf"),
     file.path(tempdir(), paste("file_name", "pdf", sep = "."))
   )
-
   expect_identical(
     unflob(flob, tempdir(), blob = NA, name = "file_name", ext = "pdf"),
     file.path(tempdir(), paste("file_name", "pdf", sep = "."))
   )
-
   expect_identical(
     unflob(blob_obj, tempdir(), blob = NA, name = "file_name", ext = "pdf"),
     file.path(tempdir(), paste("file_name", "pdf", sep = "."))
+  )
+
+  # do we like this behavior? semantic error if no check
+  expect_identical(
+    unflob(blob_obj, tempdir(), blob = NA, name = "", ext = "", check = FALSE),
+    file.path(tempdir(), paste("file", "name", sep = "."))
+  )
+
+  expect_identical(
+    unflob(flob_obj, tempdir(), blob = NA, name = "", ext = "", check = FALSE),
+    file.path(tempdir(), paste("flobr", "pdf", sep = "."))
+  )
+
+  expect_error(
+    unflob(123, tempdir(), blob = NA, name = "", ext = "", check = FALSE),
+    "connection' must be a connection"
+  )
+
+  expect_error(
+    unflob("123", tempdir(), blob = NA, name = "", ext = "", check = FALSE),
+    "character vectors are no longer accepted by unserialize()"
   )
 
 })
