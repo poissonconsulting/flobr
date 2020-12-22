@@ -50,12 +50,6 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li>
   <a href="reference/index.html">Reference</a>
 </li>
 <li>
@@ -65,7 +59,7 @@
 <ul class="nav navbar-nav navbar-right">
 <li>
   <a href="https://github.com/poissonconsulting/flobr/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -97,33 +91,33 @@
 <div id="demonstration" class="section level2">
 <h2 class="hasAnchor">
 <a href="#demonstration" class="anchor"></a>Demonstration</h2>
-<div class="sourceCode" id="cb1"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/base/library.html">library</a></span>(<span class="no">flobr</span>)
-
-<span class="no">path</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/system.file.html">system.file</a></span>(<span class="st">"extdata"</span>, <span class="st">"flobr.pdf"</span>, <span class="kw">package</span> <span class="kw">=</span> <span class="st">"flobr"</span>)
-
-<span class="no">flob</span> <span class="kw">&lt;-</span> <span class="fu"><a href="reference/flob.html">flob</a></span>(<span class="no">path</span>)
-<span class="fu"><a href="https://rdrr.io/r/utils/str.html">str</a></span>(<span class="no">flob</span>)
-<span class="co">#&gt; List of 1</span>
-<span class="co">#&gt;  $ /Library/Frameworks/R.framework/Versions/4.0/Resources/library/flobr/extdata/flobr.pdf: raw [1:133851] 58 0a 00 00 ...</span>
-<span class="co">#&gt;  - attr(*, "class")= chr [1:2] "flob" "blob"</span>
-<span class="fu"><a href="reference/flob_name.html">flob_name</a></span>(<span class="no">flob</span>)
-<span class="co">#&gt; [1] "flobr"</span>
-<span class="fu"><a href="reference/flob_ext.html">flob_ext</a></span>(<span class="no">flob</span>)
-<span class="co">#&gt; [1] "pdf"</span>
-
-<span class="fu"><a href="reference/unflob.html">unflob</a></span>(<span class="no">flob</span>, <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html">tempdir</a></span>())
-
-<span class="fu"><a href="https://rdrr.io/r/base/all.equal.html">all.equal</a></span>(<span class="no">flob</span>, <span class="fu"><a href="reference/flob.html">flob</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/file.path.html">file.path</a></span>(<span class="fu"><a href="https://rdrr.io/r/base/tempfile.html">tempdir</a></span>(), <span class="st">"flobr.pdf"</span>)), <span class="kw">check.attributes</span> <span class="kw">=</span> <span class="fl">FALSE</span>)
-<span class="co">#&gt; [1] TRUE</span></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">library</span>(flobr)</span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a>path &lt;-<span class="st"> </span><span class="kw">system.file</span>(<span class="st">"extdata"</span>, <span class="st">"flobr.pdf"</span>, <span class="dt">package =</span> <span class="st">"flobr"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4"></a></span>
+<span id="cb1-5"><a href="#cb1-5"></a>flob &lt;-<span class="st"> </span><span class="kw">flob</span>(path)</span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="kw">str</span>(flob)</span>
+<span id="cb1-7"><a href="#cb1-7"></a><span class="co">#&gt; List of 1</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a><span class="co">#&gt;  $ /Library/Frameworks/R.framework/Versions/4.0/Resources/library/flobr/extdata/flobr.pdf: raw [1:133851] 58 0a 00 00 ...</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a><span class="co">#&gt;  - attr(*, "class")= chr [1:2] "flob" "blob"</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a><span class="kw">flob_name</span>(flob)</span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="co">#&gt; [1] "flobr"</span></span>
+<span id="cb1-12"><a href="#cb1-12"></a><span class="kw">flob_ext</span>(flob)</span>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="co">#&gt; [1] "pdf"</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a></span>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="kw">unflob</span>(flob, <span class="kw">tempdir</span>())</span>
+<span id="cb1-16"><a href="#cb1-16"></a></span>
+<span id="cb1-17"><a href="#cb1-17"></a><span class="kw">all.equal</span>(flob, <span class="kw">flob</span>(<span class="kw">file.path</span>(<span class="kw">tempdir</span>(), <span class="st">"flobr.pdf"</span>)), <span class="dt">check.attributes =</span> <span class="ot">FALSE</span>)</span>
+<span id="cb1-18"><a href="#cb1-18"></a><span class="co">#&gt; [1] TRUE</span></span></code></pre></div>
 </div>
 <div id="installation" class="section level2">
 <h2 class="hasAnchor">
 <a href="#installation" class="anchor"></a>Installation</h2>
 <p>To install the latest release from <a href="https://cran.r-project.org">CRAN</a></p>
-<div class="sourceCode" id="cb2"><pre class="r"><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span>(<span class="st">"flobr"</span>)</pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="kw">install.packages</span>(<span class="st">"flobr"</span>)</span></code></pre></div>
 <p>To install the developmental version from <a href="https://github.com/poissonconsulting/flobr">GitHub</a></p>
-<div class="sourceCode" id="cb3"><pre class="r"><span class="co"># install.packages("remotes")</span>
-<span class="kw pkg">remotes</span><span class="kw ns">::</span><span class="fu"><a href="https://remotes.r-lib.org/reference/install_github.html">install_github</a></span>(<span class="st">"poissonconsulting/flobr"</span>)</pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode R"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co"># install.packages("remotes")</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a>remotes<span class="op">::</span><span class="kw">install_github</span>(<span class="st">"poissonconsulting/flobr"</span>)</span></code></pre></div>
 </div>
 <div id="creditation" class="section level2">
 <h2 class="hasAnchor">
@@ -175,6 +169,7 @@
 <h2>Developers</h2>
 <ul class="list-unstyled">
 <li>Joe Thorley <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-7683-4592" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li>Evan Amies-Galonski <br><small class="roles"> Author </small> <a href="https://orcid.org/https://orcid.org/0000-0003-1096-2089" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
 <li>Poisson Consulting <br><small class="roles"> Copyright holder, funder </small>  </li>
 </ul>
 </div>
@@ -194,11 +189,11 @@
 
 
       <footer><div class="copyright">
-  <p>Developed by Joe Thorley, Poisson Consulting.</p>
+  <p>Developed by Joe Thorley, Evan Amies-Galonski, Poisson Consulting.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.9000.</p>
 </div>
 
       </footer>

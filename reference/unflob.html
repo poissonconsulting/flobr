@@ -87,12 +87,6 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="../index.html">
-    <span class="fas fa fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li>
   <a href="../reference/index.html">Reference</a>
 </li>
 <li>
@@ -102,7 +96,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
   <a href="https://github.com/poissonconsulting/flobr/">
-    <span class="fab fa fab fa-github fa-lg"></span>
+    <span class="fab fa-github fa-lg"></span>
      
   </a>
 </li>
@@ -128,7 +122,7 @@
     <p>Converts a <code><a href='flob.html'>flob()</a></code> back to its original file format.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>unflob</span>(<span class='no'>flob</span>, <span class='kw'>dir</span> <span class='kw'>=</span> <span class='st'>"."</span>, <span class='kw'>name</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>ext</span> <span class='kw'>=</span> <span class='st'>""</span>)</pre>
+    <pre class="usage"><span class='fu'>unflob</span><span class='op'>(</span><span class='va'>flob</span>, dir <span class='op'>=</span> <span class='st'>"."</span>, name <span class='op'>=</span> <span class='st'>""</span>, ext <span class='op'>=</span> <span class='st'>""</span>, blob <span class='op'>=</span> <span class='cn'>FALSE</span>, check <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -151,6 +145,15 @@ If "" (the default) then the original file name is used.</p></td>
       <td><p>A string of the extension for the file.
 If "" (the default) then the original extension is used.</p></td>
     </tr>
+    <tr>
+      <th>blob</th>
+      <td><p>A logical scalar specifying whether to process blobs instead of flobs.
+If NA, either will be accepted, but blobs require that ext and name be provided.</p></td>
+    </tr>
+    <tr>
+      <th>check</th>
+      <td><p>A flag indicating whether to run comprehensive checks on user input.</p></td>
+    </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
@@ -169,7 +172,8 @@ Alternatively if path also includes an extension
 then it must match the flob's extension.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>unflob</span>(<span class='no'>flob_obj</span>, <span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span>())</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>unflob</span><span class='op'>(</span><span class='va'>flob_obj</span>, <span class='fu'><a href='https://rdrr.io/r/base/tempfile.html'>tempdir</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span>
+</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
@@ -181,11 +185,11 @@ then it must match the flob's extension.</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Joe Thorley, Poisson Consulting.</p>
+  <p>Developed by Joe Thorley, Evan Amies-Galonski, Poisson Consulting.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.5.1.9000.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.9000.</p>
 </div>
 
       </footer>
