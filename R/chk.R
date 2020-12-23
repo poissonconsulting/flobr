@@ -43,6 +43,17 @@ chk_flob <- function(x, old = FALSE, x_name = NULL) {
   chk_exint(exint, x_name = paste("serialized element of", x_name))
 }
 
+#' Check slob
+#'
+#' Checks whether an object is a slob (serialized blob).
+#'
+#' @inheritParams chk::chk_flag
+#' @return `NULL`, invisibly. Called for the side effect of throwing an error
+#'   if the condition is not met.
+#' @seealso [flobr()] and [chk_slob()].
+#' @export
+#' @examples
+#' chk_slob(flobr:::slob_obj)
 chk_slob <- function(x, x_name = NULL) {
   if (vld_slob(x)) {
     return(invisible())

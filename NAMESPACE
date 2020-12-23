@@ -2,6 +2,7 @@
 
 export(check_flob)
 export(chk_flob)
+export(chk_slob)
 export(flob)
 export(flob_ext)
 export(flob_name)
