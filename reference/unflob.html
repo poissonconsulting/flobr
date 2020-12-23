@@ -122,7 +122,7 @@
     <p>Converts a <code><a href='flob.html'>flob()</a></code> back to its original file format.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>unflob</span><span class='op'>(</span><span class='va'>flob</span>, dir <span class='op'>=</span> <span class='st'>"."</span>, name <span class='op'>=</span> <span class='st'>""</span>, ext <span class='op'>=</span> <span class='st'>""</span>, blob <span class='op'>=</span> <span class='cn'>FALSE</span>, check <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>unflob</span><span class='op'>(</span><span class='va'>flob</span>, dir <span class='op'>=</span> <span class='st'>"."</span>, name <span class='op'>=</span> <span class='st'>""</span>, ext <span class='op'>=</span> <span class='st'>""</span>, slob <span class='op'>=</span> <span class='cn'>FALSE</span>, check <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -146,9 +146,9 @@ If "" (the default) then the original file name is used.</p></td>
 If "" (the default) then the original extension is used.</p></td>
     </tr>
     <tr>
-      <th>blob</th>
-      <td><p>A logical scalar specifying whether to process blobs instead of flobs.
-If NA, either will be accepted, but blobs require that ext and name be provided.</p></td>
+      <th>slob</th>
+      <td><p>A logical scalar specifying whether to process slobs (serialized blobs) instead of flobs.
+If NA, either will be accepted, but slobs require that ext and name be provided.</p></td>
     </tr>
     <tr>
       <th>check</th>
