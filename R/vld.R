@@ -30,15 +30,7 @@ vld_flob <- function(x, old = FALSE) {
   vld_exint(exint)
 }
 
-
-#' Validate blob Object
-#'
-#' Validates a [blob()] object.
-#'
-#' @param x The object to check.
-#' @return A flag indicating whether the object passed the test.
-#' @seealso [chk_blob()]
-vld_blob <- function(x) {
+vld_slob <- function(x) {
   if (!(vld_s3_class(x, "blob") && vld_scalar(x) && vld_list(x))) {
     return(FALSE)
   }

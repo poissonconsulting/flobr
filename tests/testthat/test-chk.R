@@ -22,28 +22,28 @@ test_that("chk_flob", {
   )
 })
 
-test_that("chk_blob", {
-  expect_null(chk_blob(blob_obj))
-  expect_invisible(chk_blob(blob_obj))
+test_that("chk_slob", {
+  expect_null(chk_slob(slob_obj))
+  expect_invisible(chk_slob(slob_obj))
 
-  expect_null(chk_blob(flob_obj))
-  expect_invisible(chk_blob(flob_obj))
+  expect_null(chk_slob(flob_obj))
+  expect_invisible(chk_slob(flob_obj))
 
-  expect_null(chk_blob(flob_old))
-  expect_invisible(chk_blob(flob_old))
+  expect_null(chk_slob(flob_old))
+  expect_invisible(chk_slob(flob_old))
 
 
-  expect_error(chk_blob(1), "^`1` must inherit from S3 class 'blob'[.]$",
+  expect_error(chk_slob(1), "^`1` must inherit from S3 class 'blob'[.]$",
                class = "chk_error"
   )
   x <- as_blob(charToRaw("oeu"))
-  expect_error(chk_blob(x), "^`x` must be a blob of a serialized object[.]$",
+  expect_error(chk_slob(x), "^`x` must be a blob of a serialized object[.]$",
                class = "chk_error"
   )
 
   x <- list(x = 1)
   class(x) <- "blob"
-  expect_error(chk_blob(x), "^`x` must be a blob of a serialized object[.]$",
+  expect_error(chk_slob(x), "^`x` must be a blob of a serialized object[.]$",
                class = "chk_error"
   )
 })

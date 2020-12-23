@@ -62,30 +62,30 @@ flob <- function(path, name = "") {
 #' If "" (the default) then the original file name is used.
 #' @param ext A string of the extension for the file.
 #' If "" (the default) then the original extension is used.
-#' @param blob A logical scalar specifying whether to process blobs instead of flobs.
-#' If NA, either will be accepted, but blobs require that ext and name be provided.
+#' @param slob A logical scalar specifying whether to process slobs (serialized blobs) instead of flobs.
+#' If NA, either will be accepted, but slobs require that ext and name be provided.
 #' @param check A flag indicating whether to run comprehensive checks on user input.
 #' @return An invisible string of the path to the saved file.
 #' @export
 #' @examples
 #' unflob(flob_obj, tempdir())
-unflob <- function(flob, dir = ".", name = "", ext = "", blob = FALSE, check = TRUE) {
+unflob <- function(flob, dir = ".", name = "", ext = "", slob = FALSE, check = TRUE) {
 
   chk_string(dir)
   chk_string(name)
   chk_string(ext)
-  chk_lgl(blob)
+  chk_lgl(slob)
   chk_flag(check)
 
   if(check){
-    if (vld_false(blob)){
+    if (vld_false(slob)){
       chk_flob(flob, old = TRUE)
-    } else if (vld_true(blob)){
-      chk_blob(flob)
-      if (identical(name, "") || identical(ext, "")) err("`name` and `ext` must be provided for blob objects.")
+    } else if (vld_true(slob)){
+      chk_slob(flob)
+      if (identical(name, "") || identical(ext, "")) err("`name` and `ext` must be provided for slob objects.")
     } else if (!vld_flob(flob)) {
-      chkor(chk_blob(flob), chk_flob(flob, old = TRUE))
-      if (identical(name, "") || identical(ext, "")) err("`name` and `ext` must be provided for blob objects.")
+      chkor(chk_slob(flob), chk_flob(flob, old = TRUE))
+      if (identical(name, "") || identical(ext, "")) err("`name` and `ext` must be provided for slob objects.")
     }
   }
 

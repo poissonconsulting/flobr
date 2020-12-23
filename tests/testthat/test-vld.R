@@ -12,12 +12,12 @@ test_that("vld_flob", {
 })
 
 
-test_that("vld_blob", {
-  expect_true(vld_blob(blob_obj))
-  expect_true(vld_blob(flob_obj))
-  expect_false(vld_blob(1))
+test_that("vld_slob", {
+  expect_true(vld_slob(slob_obj))
+  expect_true(vld_slob(flob_obj))
+  expect_false(vld_slob(1))
 
   x <- list(x = 1)
   class(x) <- "blob"
-  expect_false(vld_blob(x))
+  expect_false(vld_slob(x))
 })
