@@ -1,5 +1,3 @@
-context("tools")
-
 test_that("tools file_ext", {
   expect_identical(tools::file_ext("pdf"), "")
   expect_identical(tools::file_ext(".pdf"), "pdf")

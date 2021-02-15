@@ -1,5 +1,3 @@
-context("path")
-
 test_that("path", {
   expect_identical(
     path(file_separator(), "file2.png"),

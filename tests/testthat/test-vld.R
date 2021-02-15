@@ -1,5 +1,3 @@
-context("vld")
-
 test_that("vld_flob", {
   expect_true(vld_s3_class(flob_old, "flob"))
   expect_true(vld_scalar(flob_old))
