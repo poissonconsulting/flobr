@@ -68,7 +68,7 @@ remotes::install_github("poissonconsulting/flobr")
 
 The [blob](https://github.com/tidyverse/blob) package.
 
-The hex was designed by [The Forest](http://www.theforest.ca).
+The hex was designed by [The Forest](http://www.theforest.ca/).
 
 ## Contribution
 
