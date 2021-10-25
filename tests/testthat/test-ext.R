@@ -1,5 +1,3 @@
-context("ext")
-
 test_that("ext", {
   expect_identical(ext("pdf"), "pdf")
   expect_identical(ext(".pdf"), "pdf")

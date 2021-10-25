@@ -1,5 +1,3 @@
-context("name")
-
 test_that("name", {
   expect_identical(name("", "path/file2.png"), "file2.png")
   expect_identical(name("", "file2.png"), "file2.png")

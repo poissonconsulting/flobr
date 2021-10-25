@@ -14,7 +14,6 @@
 
 - Internal changes only.
 
-
 # flobr 0.2.1
 
 - Replace dependency on checkr by dependency on chk.

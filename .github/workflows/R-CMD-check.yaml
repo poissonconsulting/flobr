@@ -2,7 +2,7 @@ on:
   push:
   pull_request:
   schedule:
-    - cron:  '0 8 * * *'
+    - cron:  '0 8 * * 0'
 
 name: R-CMD-check
 

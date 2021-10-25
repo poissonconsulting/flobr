@@ -1,5 +1,3 @@
-context("flobr")
-
 test_that("flob_old", {
   expect_true(is_flob(flob_old))
   expect_error(
