@@ -16,4 +16,4 @@ release 4.0.0
 
 There is 1 reverse dependency
 
-dbflobr 0.1.0                     E: 0     | W: 0     | N: 0 
+dbflobr 0.2.1                     E: 0     | W: 0     | N: 0 
