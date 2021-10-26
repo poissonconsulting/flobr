@@ -7,8 +7,7 @@
 
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
-[![R build
-status](https://github.com/poissonconsulting/flobr/workflows/R-CMD-check/badge.svg)](https://github.com/poissonconsulting/flobr/actions)
+[![R-CMD-check](https://github.com/poissonconsulting/flobr/workflows/R-CMD-check/badge.svg)](https://github.com/poissonconsulting/flobr/actions)
 [![Coverage
 status](https://codecov.io/gh/poissonconsulting/flobr/branch/master/graph/badge.svg)](https://codecov.io/github/poissonconsulting/flobr?branch=master)
 [![License:
@@ -16,7 +15,6 @@ MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org
 [![CRAN
 status](https://www.r-pkg.org/badges/version/flobr)](https://cran.r-project.org/package=flobr)
 ![CRAN Downloads](https://cranlogs.r-pkg.org/badges/flobr)
-[![R-CMD-check](https://github.com/poissonconsulting/flobr/workflows/R-CMD-check/badge.svg)](https://github.com/poissonconsulting/flobr/actions)
 <!-- badges: end -->
 
 ## Introduction
