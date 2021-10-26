@@ -16,6 +16,7 @@ MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org
 [![CRAN
 status](https://www.r-pkg.org/badges/version/flobr)](https://cran.r-project.org/package=flobr)
 ![CRAN Downloads](https://cranlogs.r-pkg.org/badges/flobr)
+[![R-CMD-check](https://github.com/poissonconsulting/flobr/workflows/R-CMD-check/badge.svg)](https://github.com/poissonconsulting/flobr/actions)
 <!-- badges: end -->
 
 ## Introduction
