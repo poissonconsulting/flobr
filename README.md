@@ -39,7 +39,7 @@ path <- system.file("extdata", "flobr.pdf", package = "flobr")
 flob <- flob(path)
 str(flob)
 #> List of 1
-#>  $ /Library/Frameworks/R.framework/Versions/4.0/Resources/library/flobr/extdata/flobr.pdf: raw [1:133851] 58 0a 00 00 ...
+#>  $ /Library/Frameworks/R.framework/Versions/4.1/Resources/library/flobr/extdata/flobr.pdf: raw [1:133851] 58 0a 00 00 ...
 #>  - attr(*, "class")= chr [1:2] "flob" "blob"
 flob_name(flob)
 #> [1] "flobr"
@@ -72,7 +72,7 @@ remotes::install_github("poissonconsulting/flobr")
 
 The [blob](https://github.com/tidyverse/blob) package.
 
-The hex was designed by [The Forest](http://www.theforest.ca).
+The hex was designed by [The Forest](http://www.theforest.ca/).
 
 ## Contribution
 
