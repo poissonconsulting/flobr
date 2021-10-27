@@ -1,5 +1,10 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# flobr 0.2.2.9000
+
+- Same as previous version.
+
+
 # flobr 0.2.2
 
 - Clarify back-compatibility with slobs (serialized blobs) instead of blobs.
