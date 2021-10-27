@@ -2,7 +2,7 @@
 
 # flobr 0.2.2
 
-- clarify back-compatibility with slobs (serialized blobs) instead of blobs.
+- Clarify back-compatibility with slobs (serialized blobs) instead of blobs.
 
 
 # flobr 0.2.1.9001
