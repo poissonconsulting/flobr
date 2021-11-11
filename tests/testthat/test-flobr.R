@@ -70,7 +70,7 @@ test_that("package with pdf", {
   flob2 <- flob(file.path(tempdir(), paste("flobr", "pdf", sep = ".")))
   expect_identical(flob_ext(flob2), flob_ext(flob))
   expect_identical(flob_name(flob2), flob_name(flob))
-  expect_equivalent(flob2, flob)
+  expect_equal(flob2, flob, ignore_attr = TRUE)
 })
 
 test_that("slob arg works", {
