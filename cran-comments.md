@@ -1,19 +1,20 @@
 ## Test environments
 
-release 4.0.0
+release 4.1.1
 
 * OSX (local) - release
-* OSX (actions) - release and devel
-* Ubuntu (actions) - 3.5 to release
-* Windows (winbuilder) - devel
+* OSX (actions) - release
+* Ubuntu (actions) - 3.5, 3.6, oldrel, release and devel
 * Windows (actions) - release
+* Windows (winbuilder) - devel
 
 ## R CMD check results
 
-0 errors | 0 warnings | 0 note
+0 errors | 0 warnings | 0 notes
 
-## Reverse Dependencies
+## revdepcheck results
 
-There is 1 reverse dependency
+We checked 1 reverse dependencies, comparing R CMD check results across CRAN and dev versions of this package.
 
-dbflobr 0.2.1                     E: 0     | W: 0     | N: 0 
+ * We saw 0 new problems
+ * We failed to check 0 packages
