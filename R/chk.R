@@ -73,3 +73,4 @@ chk_slob <- function(x, x_name = NULL) {
   class(exint) <- "exint"
   chk_exint(exint, x_name = paste("serialized element of", x_name))
 }
+
