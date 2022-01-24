@@ -41,12 +41,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - uses: r-lib/actions/setup-tinytex@v2
-      - run: tlmgr --version
-
-      - name: Install additional LaTeX packages
-        run: |
-          tlmgr install titlesec
-          tlmgr list --only-installed
+      - run:  |
+          tlmgr install makeindex
+          tlmgr --version
 
       - uses: r-lib/actions/setup-r@master
         with:
