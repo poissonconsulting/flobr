@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# flobr <img src="man/figures/logo.png" align="right" />
+# flobr <img src="man/figures/logo.png" style='text-align: right;' />
 
 <!-- badges: start -->
 
