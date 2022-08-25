@@ -1,6 +1,6 @@
 ## Test environments
 
-release 4.1.1
+release 4.2.1
 
 * OSX (local) - release
 * OSX (actions) - release
