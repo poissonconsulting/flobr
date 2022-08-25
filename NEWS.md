@@ -2,29 +2,14 @@
 
 # flobr 0.2.3
 
-## Merge branch 'master' of github.com
-poissonconsulting/flobr
-
-
-
-# flobr 0.2.2.9000
-
-- Same as previous version.
+- Fix HTML attribute.
 
 
 # flobr 0.2.2
 
 - Clarify back-compatibility with slobs (serialized blobs) instead of blobs.
-
-
-# flobr 0.2.1.9001
-
 - Added `chk_blob()` and `vld_blob()`.
 - `unflob()` now accommodates blobs if name and ext provided and has a check argument to switch off checking.
-
-# flobr 0.2.1.9000
-
-- Internal changes only.
 
 # flobr 0.2.1
 
