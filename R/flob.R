@@ -84,7 +84,9 @@ unflob <- function(flob, dir = ".", name = "", ext = "", slob = FALSE, check = T
       chk_slob(flob)
       if (identical(name, "") || identical(ext, "")) err("`name` and `ext` must be provided for slob objects.")
     } else if (!vld_flob(flob)) {
-      chkor(chk_slob(flob), chk_flob(flob, old = TRUE))
+      if(!vld_slob(flob) && !vld_flob(flob, old = TRUE)) {
+        chkor_vld(vld_slob(flob), vld_flob(flob, old = TRUE))
+      }
       if (identical(name, "") || identical(ext, "")) err("`name` and `ext` must be provided for slob objects.")
     }
   }

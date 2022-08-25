@@ -12,11 +12,11 @@ Deprecated \code{pkgtemplate} functions.
 }
 \section{Functions}{
 \itemize{
-\item \code{check_flob}: Check Function Template
+\item \code{check_flob()}: Check Function Template
 
 \lifecycle{soft-deprecated}
-}}
 
+}}
 \examples{
 
 check_flob(flobr::flob_obj)
