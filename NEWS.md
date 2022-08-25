@@ -1,5 +1,10 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# flobr 0.2.3.9000
+
+- Same as previous version.
+
+
 # flobr 0.2.3
 
 - Fix HTML attribute.
