@@ -17,7 +17,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">flobr</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.2.2.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.2.3</span>
       </span>
     </div>
 
@@ -53,30 +53,43 @@
     </div>
 
     <div id="ref-usage">
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="fu">unflob</span><span class="op">(</span><span class="va">flob</span>, dir <span class="op">=</span> <span class="st">"."</span>, name <span class="op">=</span> <span class="st">""</span>, ext <span class="op">=</span> <span class="st">""</span>, slob <span class="op">=</span> <span class="cn">FALSE</span>, check <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">unflob</span><span class="op">(</span><span class="va">flob</span>, dir <span class="op">=</span> <span class="st">"."</span>, name <span class="op">=</span> <span class="st">""</span>, ext <span class="op">=</span> <span class="st">""</span>, slob <span class="op">=</span> <span class="cn">FALSE</span>, check <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
     </div>
 
     <div id="arguments">
     <h2>Arguments</h2>
     <dl><dt>flob</dt>
 <dd><p>The <code><a href="flob.html">flob()</a></code> to save to file.</p></dd>
+
+
 <dt>dir</dt>
 <dd><p>A string of the path to the directory to save the file in.</p></dd>
+
+
 <dt>name</dt>
 <dd><p>A string of the name (without the extension) for the file.
 If "" (the default) then the original file name is used.</p></dd>
+
+
 <dt>ext</dt>
 <dd><p>A string of the extension for the file.
 If "" (the default) then the original extension is used.</p></dd>
+
+
 <dt>slob</dt>
 <dd><p>A logical scalar specifying whether to process slobs (serialized blobs) instead of flobs.
 If NA, either will be accepted, but slobs require that ext and name be provided.</p></dd>
+
+
 <dt>check</dt>
 <dd><p>A flag indicating whether to run comprehensive checks on user input.</p></dd>
+
 </dl></div>
     <div id="value">
     <h2>Value</h2>
-    <p>An invisible string of the path to the saved file.</p>
+    
+
+<p>An invisible string of the path to the saved file.</p>
     </div>
     <div id="details">
     <h2>Details</h2>
@@ -93,7 +106,7 @@ then it must match the flob's extension.</p>
 
     <div id="ref-examples">
     <h2>Examples</h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span class="fu">unflob</span><span class="op">(</span><span class="va">flob_obj</span>, <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempdir</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="fu">unflob</span><span class="op">(</span><span class="va">flob_obj</span>, <span class="fu"><a href="https://rdrr.io/r/base/tempfile.html" class="external-link">tempdir</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></span>
 </code></pre></div>
     </div>
   </div>
@@ -108,7 +121,7 @@ then it must match the flob's extension.</p>
 </div>
 
 <div class="pkgdown">
-  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.9000.</p>
+  <p></p><p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.6.9000.</p>
 </div>
 
       </footer></div>
