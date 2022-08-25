@@ -2,9 +2,9 @@ Package: flobr
 Title: Convert Files to and from Binary Objects (BLOBs)
 Version: 0.2.3.9000
 Authors@R: c(
-    person("Evan", "Amies-Galonski", , "evan@poissonconsulting.ca", role = c("aut", "cre"),
+    person("Evan", "Amies-Galonski", , "evan@poissonconsulting.ca", role = "aut",
            comment = c(ORCID = "0000-0003-1096-2089")),
-    person("Joe", "Thorley", , "joe@poissonconsulting.ca", role = "aut",
+    person("Joe", "Thorley", , "joe@poissonconsulting.ca", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0002-7683-4592")),
     person("Poisson Consulting", role = c("cph", "fnd"))
   )
