@@ -1,5 +1,12 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# flobr 0.2.3
+
+## Merge branch 'master' of github.com
+poissonconsulting/flobr
+
+
+
 # flobr 0.2.2.9000
 
 - Same as previous version.
