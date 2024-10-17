@@ -1,20 +1,20 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
-# flobr <img src="man/figures/logo.png" style="float: right;" />
-
 <!-- badges: start -->
 
 [![Lifecycle:
 stable](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
-[![R-CMD-check](https://github.com/poissonconsulting/flobr/workflows/R-CMD-check/badge.svg)](https://github.com/poissonconsulting/flobr/actions)
-[![codecov](https://codecov.io/gh/poissonconsulting/flobr/branch/master/graph/badge.svg?token=iHrSt6gGqG)](https://app.codecov.io/gh/poissonconsulting/flobr)
+[![R-CMD-check](https://github.com/poissonconsulting/flobr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/poissonconsulting/flobr/actions/workflows/R-CMD-check.yaml)
+[![Codecov test
+coverage](https://codecov.io/gh/poissonconsulting/flobr/graph/badge.svg)](https://app.codecov.io/gh/poissonconsulting/flobr)
 [![License:
-MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/license/mit/)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/flobr)](https://cran.r-project.org/package=flobr)
 ![CRAN Downloads](https://cranlogs.r-pkg.org/badges/flobr)
 <!-- badges: end -->
+
+# flobr <img src="man/figures/logo.png" style="float: right;" />
 
 ## Introduction
 
@@ -37,7 +37,7 @@ path <- system.file("extdata", "flobr.pdf", package = "flobr")
 flob <- flob(path)
 str(flob)
 #> List of 1
-#>  $ /Users/joe/Library/R/x86_64/4.2/library/flobr/extdata/flobr.pdf: raw [1:133851] 58 0a 00 00 ...
+#>  $ /Library/Frameworks/R.framework/Versions/4.4-arm64/Resources/library/flobr/extdata/flobr.pdf: raw [1:133851] 58 0a 00 00 ...
 #>  - attr(*, "class")= chr [1:2] "flob" "blob"
 flob_name(flob)
 #> [1] "flobr"
