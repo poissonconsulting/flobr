@@ -17,7 +17,7 @@ License: MIT + file LICENSE
 URL: https://github.com/poissonconsulting/flobr
 BugReports: https://github.com/poissonconsulting/flobr/issues
 Depends: 
-    R (>= 4.3)
+    R (>= 4.0)
 Imports: 
     blob,
     chk,
