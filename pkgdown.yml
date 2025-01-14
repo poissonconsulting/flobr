@@ -2,4 +2,7 @@ pandoc: 3.1.11
 pkgdown: 2.1.1
 pkgdown_sha: ~
 articles: {}
-last_built: 2024-11-04T21:00Z
+last_built: 2025-01-14T21:09Z
+urls:
+  reference: https://poissonconsulting.github.io/flobr/reference
+  article: https://poissonconsulting.github.io/flobr/articles
