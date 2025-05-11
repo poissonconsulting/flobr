@@ -50,18 +50,18 @@ all.equal(flob, flob(file.path(tempdir(), "flobr.pdf")), check.attributes = FALS
 
 ## Installation
 
-To install the latest release from [CRAN](https://cran.r-project.org)
-
-``` r
-install.packages("flobr")
-```
-
-To install the developmental version from
+To install the most recent version from
 [GitHub](https://github.com/poissonconsulting/flobr)
 
 ``` r
 # install.packages("remotes")
 remotes::install_github("poissonconsulting/flobr")
+```
+
+or from [r-universe](https://poissonconsulting.r-universe.dev/flobr).
+
+``` r
+install.packages("flobr", repos = c("https://poissonconsulting.r-universe.dev", "https://cloud.r-project.org"))
 ```
 
 ## Creditation
