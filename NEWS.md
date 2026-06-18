@@ -1,5 +1,12 @@
 <!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
 
+# flobr 0.2.3.9001
+
+* Add fledge-bump workflow
+* Add fledge-tag-on-merge workflow
+- Evan Amies-Galonski now maintainer.
+
+
 # flobr 0.2.3.9000
 
 - Same as previous version.
