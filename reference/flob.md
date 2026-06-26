@@ -42,7 +42,7 @@ path <- system.file("extdata", "flobr.pdf", package = "flobr")
 flob <- flob(path)
 flob
 #> $`/home/runner/work/_temp/Library/flobr/extdata/flobr.pdf`
-#>     [1] 58 0a 00 00 00 03 00 04 06 00 00 03 05 00 00 00 00 05 55 54 46 2d 38 00
+#>     [1] 58 0a 00 00 00 03 00 04 06 01 00 03 05 00 00 00 00 05 55 54 46 2d 38 00
 #>    [25] 00 03 13 00 00 00 01 00 00 00 0d 00 00 82 96 46 44 50 25 35 2e 31 2d d4
 #>    [49] d0 25 0a 31 0a d8 c5 30 20 35 38 6a 62 6f 20 0a 3c 3c 0a 6e 65 4c 2f 20
 #>    [73] 68 74 67 37 30 32 31 20 20 20 20 2f 0a 20 20 74 6c 69 46 2f 20 72 65 74
