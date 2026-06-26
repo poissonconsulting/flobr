@@ -19,13 +19,13 @@ Source:
 [`DESCRIPTION`](https://github.com/poissonconsulting/flobr/blob/main/DESCRIPTION)
 
 Amies-Galonski E, Thorley J (2026). *flobr: Convert Files to and from
-Binary Objects (BLOBs)*. R package version 0.2.3.9001,
+Binary Objects (BLOBs)*. R package version 0.2.3.9002,
 <https://github.com/poissonconsulting/flobr>.
 
     @Manual{,
       title = {flobr: Convert Files to and from Binary Objects (BLOBs)},
       author = {Evan Amies-Galonski and Joe Thorley},
       year = {2026},
-      note = {R package version 0.2.3.9001},
+      note = {R package version 0.2.3.9002},
       url = {https://github.com/poissonconsulting/flobr},
     }
