@@ -69,25 +69,35 @@ flob <- function(path, name = "") {
 #' @export
 #' @examples
 #' unflob(flob_obj, tempdir())
-unflob <- function(flob, dir = ".", name = "", ext = "", slob = FALSE, check = TRUE) {
-
+unflob <- function(
+  flob,
+  dir = ".",
+  name = "",
+  ext = "",
+  slob = FALSE,
+  check = TRUE
+) {
   chk_string(dir)
   chk_string(name)
   chk_string(ext)
   chk_lgl(slob)
   chk_flag(check)
 
-  if(check){
-    if (vld_false(slob)){
+  if (check) {
+    if (vld_false(slob)) {
       chk_flob(flob, old = TRUE)
-    } else if (vld_true(slob)){
+    } else if (vld_true(slob)) {
       chk_slob(flob)
-      if (identical(name, "") || identical(ext, "")) err("`name` and `ext` must be provided for slob objects.")
+      if (identical(name, "") || identical(ext, "")) {
+        err("`name` and `ext` must be provided for slob objects.")
+      }
     } else if (!vld_flob(flob)) {
-      if(!vld_slob(flob) && !vld_flob(flob, old = TRUE)) {
+      if (!vld_slob(flob) && !vld_flob(flob, old = TRUE)) {
         chkor_vld(vld_slob(flob), vld_flob(flob, old = TRUE))
       }
-      if (identical(name, "") || identical(ext, "")) err("`name` and `ext` must be provided for slob objects.")
+      if (identical(name, "") || identical(ext, "")) {
+        err("`name` and `ext` must be provided for slob objects.")
+      }
     }
   }
 
@@ -96,8 +106,12 @@ unflob <- function(flob, dir = ".", name = "", ext = "", slob = FALSE, check = T
   names <- names(flob)
   flob <- unlist(flob)
 
-  if (identical(name, "")) name <- file(names)
-  if (identical(ext, "")) ext <- ext(names)
+  if (identical(name, "")) {
+    name <- file(names)
+  }
+  if (identical(ext, "")) {
+    ext <- ext(names)
+  }
 
   path <- file.path(dir, paste(name, ext, sep = "."))
   writeBin(flob, con = path, endian = "little")
