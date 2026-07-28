@@ -28,12 +28,15 @@ test_that("flob_noname", {
 })
 
 test_that("package with pdf", {
-  path <- system.file("extdata", "flobr.pdf",
+  path <- system.file(
+    "extdata",
+    "flobr.pdf",
     package = "flobr",
     mustWork = TRUE
   )
 
-  expect_error(flob(1),
+  expect_error(
+    flob(1),
     "^`path` must be a string [(]non-missing character scalar[)][.]$",
     class = "chk_error"
   )
@@ -74,9 +77,11 @@ test_that("package with pdf", {
 })
 
 test_that("slob arg works", {
-  path <- system.file("extdata", "flobr.pdf",
-                      package = "flobr",
-                      mustWork = TRUE
+  path <- system.file(
+    "extdata",
+    "flobr.pdf",
+    package = "flobr",
+    mustWork = TRUE
   )
 
   flob <- flobr::flob(path)
@@ -138,6 +143,4 @@ test_that("slob arg works", {
     unflob("123", tempdir(), slob = NA, name = "", ext = "", check = FALSE),
     "character vectors are no longer accepted by unserialize()"
   )
-
 })
-
