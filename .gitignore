@@ -8,8 +8,10 @@
 .RProfile
 .httr-oauth
 
+.claude/
+
 *.html
 
-docs/
-inst/docs/
-scripts/
+/docs/
+/inst/docs/
+/paper/paper.pdf
