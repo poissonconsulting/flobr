@@ -13,7 +13,7 @@ Converts files to and from flobs. A flob is a file that was read into binary in 
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://github.com/poissonconsulting/flobr}
+  \item \url{https://poissonconsulting.github.io/flobr}
   \item Report bugs at \url{https://github.com/poissonconsulting/flobr/issues}
 }
 
