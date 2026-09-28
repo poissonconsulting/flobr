@@ -3,18 +3,18 @@ test_that("chk_flob", {
   expect_invisible(chk_flob(flob_old, old = TRUE))
   expect_error(
     chk_flob(1),
-    "^`1` must inherit from S3 class 'flob'[.]$",
+    "^`1` must inherit from S3 class 'flob', not S3 class 'numeric'[.]$",
     class = "chk_error"
   )
   x <- as_blob(charToRaw("oeu"))
   expect_error(
     chk_flob(x),
-    "^`x` must inherit from S3 class 'flob'[.]$",
+    "^`x` must inherit from S3 class 'flob', not S3 classes 'blob', 'vctrs_list_of', 'vctrs_vctr' and 'list'[.]$",
     class = "chk_error"
   )
   expect_error(
     chk_flob(flob_old),
-    "^Serialized element of `flob_old` must inherit from S3 class 'exint'[.]$",
+    "^Serialized element of `flob_old` must inherit from S3 class 'exint', not S3 class 'list'[.]$",
     class = "chk_error"
   )
 
@@ -39,7 +39,7 @@ test_that("chk_slob", {
 
   expect_error(
     chk_slob(1),
-    "^`1` must inherit from S3 class 'blob'[.]$",
+    "^`1` must inherit from S3 class 'blob', not S3 class 'numeric'[.]$",
     class = "chk_error"
   )
   x <- as_blob(charToRaw("oeu"))
