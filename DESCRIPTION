@@ -14,7 +14,7 @@ Description: Converts files to and from flobs.  A flob is a file that was
     file) and then serialized before being coerced into a blob.  Flobs are
     useful for writing and reading files to and from databases.
 License: MIT + file LICENSE
-URL: https://github.com/poissonconsulting/flobr
+URL: https://poissonconsulting.github.io/flobr
 BugReports: https://github.com/poissonconsulting/flobr/issues
 Depends: 
     R (>= 4.0)
@@ -35,4 +35,4 @@ Encoding: UTF-8
 Language: en-US
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.2.9000
+Config/roxygen2/version: 8.1.0.9000
