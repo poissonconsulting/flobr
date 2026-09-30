@@ -6,7 +6,7 @@ path <- function(path, name) {
     return(p0(path, flob_name, ".", flob_ext))
   }
 
-  path_ext <- tools::file_ext(path)
+  path_ext <- file_ext(path)
 
   if (identical(path_ext, "")) {
     return(p0(path, ".", flob_ext))
