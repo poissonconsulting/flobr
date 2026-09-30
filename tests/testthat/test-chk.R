@@ -46,3 +46,15 @@ test_that("chk_slob", {
   )
 })
 
+
+test_that("chk_flob errors if element is not raw or integer", {
+  exint <- list(x.txt = 1)
+  class(exint) <- "exint"
+  x <- as_blob(list(serialize(exint, NULL)))
+  class(x) <- c("flob", "blob")
+  expect_error(
+    chk_flob(x),
+    "^Element of serialized element of `x` must be a raw or integer vector[.]$",
+    class = "chk_error"
+  )
+})
