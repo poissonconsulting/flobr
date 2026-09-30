@@ -1,7 +1,15 @@
 ext <- function(x) {
-  ext <- tools::file_ext(x)
+  ext <- file_ext(x)
   just_ext <- ext == ""
   ext[just_ext] <- x[just_ext]
+  ext
+}
+
+# tools::file_ext() ignores a leading dot in R >= 4.6
+file_ext <- function(x) {
+  has_ext <- grepl("[.][[:alnum:]]+$", x)
+  ext <- rep("", length(x))
+  ext[has_ext] <- sub("^.*[.]", "", x[has_ext])
   ext
 }
 

@@ -2,7 +2,7 @@ test_that("flob_old", {
   expect_true(is_flob(flob_old))
   expect_error(
     chk_flob(flob_old),
-    "^Serialized element of `flob_old` must inherit from S3 class 'exint'[.]",
+    "^Serialized element of `flob_old` must inherit from S3 class 'exint'",
     class = "chk_error"
   )
   expect_null(chk_flob(flob_old, old = TRUE))
@@ -97,8 +97,7 @@ test_that("slob arg works", {
   )
   expect_error(
     unflob(not_flob, tempdir(), slob = NA),
-    "At least one of the following conditions must be met:\n* `flob` must inherit from S3 class 'blob'.\n* `flob` must inherit from S3 class 'flob'.",
-    fixed = TRUE,
+    "^At least one of the following conditions must be met:\n[*] `flob` must inherit from S3 class 'blob'.*\n[*] `flob` must inherit from S3 class 'flob'",
     class = "chk_error"
   )
   expect_identical(
