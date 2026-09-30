@@ -20,7 +20,7 @@ Converts a file into a flob.
 Flobs are useful for saving files in databases.
 }
 \details{
-A flob is a file that was read into binary in integer-mode as little endian,
+A flob is a file that was read into binary in raw-mode,
 saved as the single element of a named list
 (where the name is the extension of the original file)
 and then serialized before being coerced into a blob.
