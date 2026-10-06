@@ -1,4 +1,11 @@
-<!-- NEWS.md is maintained by https://cynkra.github.io/fledge, do not edit -->
+<!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
+
+# flobr 0.2.3.9005
+
+## Bug fixes
+
+- Extract file extensions consistently across R versions (#19, #26).
+
 
 # flobr 0.2.3.9004
 
