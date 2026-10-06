@@ -1,5 +1,13 @@
 # Changelog
 
+## flobr 0.2.3.9005
+
+### Bug fixes
+
+- Extract file extensions consistently across R versions
+  ([\#19](https://github.com/poissonconsulting/flobr/issues/19),
+  [\#26](https://github.com/poissonconsulting/flobr/issues/26)).
+
 ## flobr 0.2.3.9004
 
 - Same as previous version.
