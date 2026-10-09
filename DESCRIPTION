@@ -9,10 +9,10 @@ Authors@R: c(
     person("Poisson Consulting", role = c("cph", "fnd"))
   )
 Description: Converts files to and from flobs.  A flob is a file that was
-    read into binary in integer-mode as little endian, saved as the single
-    element of a named list (where the name is the name of the original
-    file) and then serialized before being coerced into a blob.  Flobs are
-    useful for writing and reading files to and from databases.
+    read into binary in raw-mode, saved as the single element of a named
+    list (where the name is the name of the original file) and then
+    serialized before being coerced into a blob.  Flobs are useful for
+    writing and reading files to and from databases.
 License: MIT + file LICENSE
 URL: https://github.com/poissonconsulting/flobr
 BugReports: https://github.com/poissonconsulting/flobr/issues
@@ -26,7 +26,8 @@ Imports:
 Suggests: 
     covr,
     spelling,
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    withr
 RdMacros: 
     lifecycle
 Config/Needs/website: poissonconsulting/poissontemplate

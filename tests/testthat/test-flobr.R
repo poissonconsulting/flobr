@@ -140,3 +140,43 @@ test_that("slob arg works", {
 
 })
 
+
+test_that("flob round trips files of any size byte for byte", {
+  dir <- withr::local_tempdir()
+  out <- withr::local_tempdir()
+  for (n in 0:9) {
+    bytes <- as.raw(seq_len(n))
+    path <- file.path(dir, p0("file", n, ".bin"))
+    writeBin(bytes, path)
+    flob <- flob(path)
+    expect_true(vld_flob(flob))
+    unflobbed <- unflob(flob, dir = out)
+    expect_identical(readBin(unflobbed, what = "raw", n = n + 1L), bytes)
+  }
+})
+
+test_that("flob handles bytes that are NA in integer mode", {
+  dir <- withr::local_tempdir()
+  bytes <- as.raw(c(0x00, 0x00, 0x00, 0x80, 0x01))
+  path <- file.path(dir, "na.bin")
+  writeBin(bytes, path)
+  flob <- flob(path)
+  expect_true(vld_flob(flob))
+  expect_null(chk_flob(flob))
+  unflobbed <- unflob(flob, dir = withr::local_tempdir())
+  expect_identical(readBin(unflobbed, what = "raw", n = 10L), bytes)
+})
+
+test_that("legacy integer flobs with NA values are valid and unflob", {
+  bytes <- as.raw(c(0x00, 0x00, 0x00, 0x80, 0x01, 0x02, 0x03, 0x04))
+  exint <- list(na.bin = readBin(bytes, what = "integer", n = 2L, endian = "little"))
+  class(exint) <- "exint"
+  flob <- as_blob(list(serialize(exint, NULL)))
+  attr(flob, "ptype") <- NULL
+  class(flob) <- c("flob", "blob")
+  expect_true(anyNA(exint[[1]]))
+  expect_true(vld_flob(flob))
+  expect_null(chk_flob(flob))
+  unflobbed <- unflob(flob, dir = withr::local_tempdir())
+  expect_identical(readBin(unflobbed, what = "raw", n = 10L), bytes)
+})
