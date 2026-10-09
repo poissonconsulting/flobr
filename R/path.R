@@ -13,9 +13,7 @@ path <- function(path, name) {
   }
 
   if (!identical(path_ext, flob_ext)) {
-    err("Path extension must match '", flob_ext, "'.",
-      class = "flobr_error"
-    )
+    err("Path extension must match '", flob_ext, "'.", class = "flobr_error")
   }
 
   path

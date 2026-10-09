@@ -6,7 +6,10 @@ name <- function(name, path) {
   }
 
   if (grepl("[.]", name)) {
-    err("Name '", name, "' must not include an extension.",
+    err(
+      "Name '",
+      name,
+      "' must not include an extension.",
       class = "flobr_error"
     )
   }

@@ -10,4 +10,10 @@ names(slob_obj) <- "name"
 slob_obj %<>% serialize(NULL) %>% list() %>% blob::as_blob()
 
 
-usethis::use_data(flob_old, flob_noname, slob_obj, internal = TRUE, overwrite = TRUE)
+usethis::use_data(
+  flob_old,
+  flob_noname,
+  slob_obj,
+  internal = TRUE,
+  overwrite = TRUE
+)

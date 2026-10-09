@@ -1,5 +1,7 @@
 vld_exint <- function(x) {
-  vld_s3_class(x, "exint") && vld_scalar(x) && vld_named(x) &&
+  vld_s3_class(x, "exint") &&
+    vld_scalar(x) &&
+    vld_named(x) &&
     (vld_s3_class(x[[1]], "raw") || vld_s3_class(x[[1]], "integer"))
 }
 
@@ -26,7 +28,9 @@ vld_flob <- function(x, old = FALSE) {
     return(FALSE)
   }
 
-  if (old) class(exint) <- "exint"
+  if (old) {
+    class(exint) <- "exint"
+  }
   vld_exint(exint)
 }
 

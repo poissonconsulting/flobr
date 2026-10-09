@@ -2,7 +2,9 @@ chk_exint <- function(x, x_name = NULL) {
   if (vld_exint(x)) {
     return(invisible())
   }
-  if (is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
+  if (is.null(x_name)) {
+    x_name <- deparse_backtick_chk(substitute(x))
+  }
 
   chk_s3_class(x, "exint", x_name = x_name)
   chk_scalar(x, x_name = x_name)
@@ -27,7 +29,9 @@ chk_flob <- function(x, old = FALSE, x_name = NULL) {
     return(invisible())
   }
 
-  if (is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
+  if (is.null(x_name)) {
+    x_name <- deparse_backtick_chk(substitute(x))
+  }
 
   chk_s3_class(x, "flob", x_name = x_name)
   chk_scalar(x, x_name = x_name)
@@ -38,7 +42,9 @@ chk_flob <- function(x, old = FALSE, x_name = NULL) {
     abort_chk(x_name, " must be a blob of a serialized object.")
   }
 
-  if (!vld_false(old)) class(exint) <- "exint"
+  if (!vld_false(old)) {
+    class(exint) <- "exint"
+  }
   chk_exint(exint, x_name = paste("serialized element of", x_name))
 }
 
@@ -58,7 +64,9 @@ chk_slob <- function(x, x_name = NULL) {
     return(invisible())
   }
 
-  if (is.null(x_name)) x_name <- deparse_backtick_chk(substitute(x))
+  if (is.null(x_name)) {
+    x_name <- deparse_backtick_chk(substitute(x))
+  }
 
   chk_s3_class(x, "blob", x_name = x_name)
   chk_scalar(x, x_name = x_name)
@@ -72,4 +80,3 @@ chk_slob <- function(x, x_name = NULL) {
   class(exint) <- "exint"
   chk_exint(exint, x_name = paste("serialized element of", x_name))
 }
-
