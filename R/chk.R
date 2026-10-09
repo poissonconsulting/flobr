@@ -9,8 +9,7 @@ chk_exint <- function(x, x_name = NULL) {
   chk_s3_class(x, "exint", x_name = x_name)
   chk_scalar(x, x_name = x_name)
   chk_named(x, x_name = x_name)
-  chk_s3_class(x[[1]], "integer", x_name = p0("Element of ", x_name))
-  chk_no_missing(x[[1]], x_name = p0("Element of ", x_name))
+  abort_chk("Element of ", x_name, " must be a raw or integer vector.")
 }
 
 #' Check flob

@@ -2,8 +2,7 @@ vld_exint <- function(x) {
   vld_s3_class(x, "exint") &&
     vld_scalar(x) &&
     vld_named(x) &&
-    vld_s3_class(x[[1]], "integer") &&
-    vld_not_any_na(x[[1]])
+    (vld_s3_class(x[[1]], "raw") || vld_s3_class(x[[1]], "integer"))
 }
 
 #' Validate flob Object

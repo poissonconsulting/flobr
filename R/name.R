@@ -14,5 +14,5 @@ name <- function(name, path) {
     )
   }
 
-  p0(name, ".", tools::file_ext(path))
+  p0(name, ".", file_ext(path))
 }

@@ -3,18 +3,18 @@ test_that("chk_flob", {
   expect_invisible(chk_flob(flob_old, old = TRUE))
   expect_error(
     chk_flob(1),
-    "^`1` must inherit from S3 class 'flob'[.]$",
+    "^`1` must inherit from S3 class 'flob'",
     class = "chk_error"
   )
   x <- as_blob(charToRaw("oeu"))
   expect_error(
     chk_flob(x),
-    "^`x` must inherit from S3 class 'flob'[.]$",
+    "^`x` must inherit from S3 class 'flob'",
     class = "chk_error"
   )
   expect_error(
     chk_flob(flob_old),
-    "^Serialized element of `flob_old` must inherit from S3 class 'exint'[.]$",
+    "^Serialized element of `flob_old` must inherit from S3 class 'exint'",
     class = "chk_error"
   )
 
@@ -39,7 +39,7 @@ test_that("chk_slob", {
 
   expect_error(
     chk_slob(1),
-    "^`1` must inherit from S3 class 'blob'[.]$",
+    "^`1` must inherit from S3 class 'blob'",
     class = "chk_error"
   )
   x <- as_blob(charToRaw("oeu"))
@@ -54,6 +54,19 @@ test_that("chk_slob", {
   expect_error(
     chk_slob(x),
     "^`x` must be a blob of a serialized object[.]$",
+    class = "chk_error"
+  )
+})
+
+
+test_that("chk_flob errors if element is not raw or integer", {
+  exint <- list(x.txt = 1)
+  class(exint) <- "exint"
+  x <- as_blob(list(serialize(exint, NULL)))
+  class(x) <- c("flob", "blob")
+  expect_error(
+    chk_flob(x),
+    "^Element of serialized element of `x` must be a raw or integer vector[.]$",
     class = "chk_error"
   )
 })
