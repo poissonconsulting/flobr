@@ -1,5 +1,26 @@
 # Changelog
 
+## flobr 0.2.3.9006
+
+### Bug fixes
+
+- Read files in raw mode so flobs preserve every byte
+  ([\#24](https://github.com/poissonconsulting/flobr/issues/24),
+  [\#25](https://github.com/poissonconsulting/flobr/issues/25)).
+
+### Chore
+
+- Format with air
+  ([\#20](https://github.com/poissonconsulting/flobr/issues/20)).
+
+### Uncategorized
+
+- Merge pull request
+  [\#27](https://github.com/poissonconsulting/flobr/issues/27) from
+  poissonconsulting/joethorley-patch-1.
+
+  Update CODEOWNERS
+
 ## flobr 0.2.3.9005
 
 ### Bug fixes
