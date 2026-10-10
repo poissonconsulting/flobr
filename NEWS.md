@@ -1,5 +1,22 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# flobr 0.2.3.9006
+
+## Bug fixes
+
+- Read files in raw mode so flobs preserve every byte (#24, #25).
+
+## Chore
+
+- Format with air (#20).
+
+## Uncategorized
+
+- Merge pull request #27 from poissonconsulting/joethorley-patch-1.
+
+  Update CODEOWNERS
+
+
 # flobr 0.2.3.9005
 
 ## Bug fixes
