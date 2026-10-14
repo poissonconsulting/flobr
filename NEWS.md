@@ -1,5 +1,12 @@
 <!-- NEWS.md is maintained by https://fledge.cynkra.com, contributors should not edit this file -->
 
+# flobr 0.2.3.9007
+
+- Merge pull request #29 from poissonconsulting/f-ci.
+
+  Standardize CI (tier: important)
+
+
 # flobr 0.2.3.9006
 
 ## Bug fixes
