@@ -1,5 +1,13 @@
 # Changelog
 
+## flobr 0.2.3.9007
+
+- Merge pull request
+  [\#29](https://github.com/poissonconsulting/flobr/issues/29) from
+  poissonconsulting/f-ci.
+
+  Standardize CI (tier: important)
+
 ## flobr 0.2.3.9006
 
 ### Bug fixes
